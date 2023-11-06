@@ -1,0 +1,269 @@
+/* Global Styles */
+body {
+  font-family: 'Nanum Myeongjo', serif;
+  background-color: #DDD0C8;
+}
+
+/* Banner Styles */
+#banner {
+  background-image: url("../IMAGES/banner2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+#profile-image {
+  border-radius: 10px;
+}
+
+#presentation {
+  margin-bottom: 100px;
+}
+
+/* Recommendations Styles */
+#recommendations {
+  border-top: 1px solid #000000;
+}
+
+#recommendations-form {
+  margin-top: 50px;
+}
+
+/* Typography */
+p {
+  font-size: 1.05em;
+}
+
+h1, h3, h5, .introduction {
+  font-family: 'Lora', serif;
+}
+
+/* Navbar Styles */
+.navbar-custom {
+  background-color: #DDD0C8;
+  height: 100px;
+  border-bottom: 1px solid #000000;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: #000000;
+  font-weight: bold;
+}
+
+/* Footer Styles */
+.footer-custom {
+  margin-top: 150px;
+  background-color: #DDD0C8;
+  border-top: 1px solid #000000 !important;
+  height: 250px;
+}
+
+/* Main Content Styles */
+.main-custom {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 98px;
+}
+
+/* Navbar Toggle Button Styles */
+.navbar-custom .navbar-toggler-icon {
+  background-color: #DDD0C8;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: #DDD0C8;
+  background-color: #000000;
+}
+
+.navbar-custom .navbar-brand .bg-primary {
+  background-color: #000000 !important;
+  color: #DDD0C8 !important;
+}
+
+/* Other Styles */
+.skill, .project {
+  border-bottom: 1px solid #000000;
+}
+
+.skill {
+  text-align: left;
+}
+
+.skill-logo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.list-inline-item {
+  margin-bottom: 10px;
+}
+
+.text-social-black {
+  color: #000000;
+}
+
+.card-body {
+  border: 2px solid black;
+  border-radius: 5px;
+  height: 250px;
+}
+
+/* Typed Text Animation Styles */
+#typed-title {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: type-title 5s steps(206) forwards;
+}
+
+#typed-quote {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: type-quote 5s steps(206) forwards;
+  animation-delay: 5s;
+}
+
+@keyframes type-title {
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes type-quote {
+  to {
+    width: 100%;
+  }
+}
+
+/* Project Titles Styles */
+.project-title h3,
+.project-description h3,
+.project-tehnologie h3 {
+  text-align: left;
+  font-size: 1.2em;
+}
+
+/* Social Media Icon Button */
+#scrollToTopButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  color: #DDD0C8;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+/* Form Pop-up Styles */
+.popup {
+  width: 400px;
+  background-color: #000000;
+  border-radius: 3mm;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  position: fixed;
+  visibility: hidden;
+  color: #DDD0C8;
+}
+
+.popup img {
+  padding-top: 20px;
+}
+
+.popup button {
+  background-color: #DDD0C8;
+  border: 1px solid #7600bc;
+  color: #000000;
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  margin: 50px;
+  padding: 10px;
+  width: 2in;
+  font-size: 20px;
+  margin-left: 25%;
+}
+
+.popup button:hover {
+  background-color: #fff;
+  border: 2px solid #7600bc;
+  color: #7600bc;
+  display: block;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 25%;
+}
+
+.date-container {
+  position: absolute;
+  bottom: 10px; 
+  right: 12px; 
+}
+
+.card-title {
+  font-weight: 900;
+  font-size: larger;
+  display: block;
+  padding: 3px;
+}
+
+.card-text {
+  font-family: 'Gill Sans', 'Times New Roman', 'Lucida Grande';
+  overflow: auto;
+  height: 75%;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  text-align: center;
+}
+
+.card-date{
+  font-family: monospace, Times, 'Times New Roman', serif;
+  font-size: small;
+  padding-right: 5px;
+  font-weight: bolder;
+}
+
+#new-recommendation, #title-recommendation{
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+/* Change the color of the “Next” and “Previous” button */
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  background-color: #000000; 
+  border-radius: 40px;
+}
+
+/* Change the color of indicators (dots) */
+.carousel-indicators {
+  background-color: rgb(116, 108, 101);
+  border-radius: 40px;
+}
+
+.img-project{
+  padding: 3px;
+  border-radius: 10px;
+}

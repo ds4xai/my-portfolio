@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sekou Dabo - Portfolio</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="../CSS/style.css"/>
+  <script src="../JS/main.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+ 
+  <!-- Police -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lora:wght@500&family=Manrope:wght@200&family=Montserrat:wght@100&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/14273d579a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<!-- Navigation Bar -->
+<header>
+    <nav class="navbar navbar-expand-md fixed-top navbar-light navbar-custom">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold" href="../index.html">
+                <span class="bg-primary p-1 rounded-3 text-light">Sekou</span> Dabo
+            </a>
+            <a href="../RESSOURCES/CV_SEKOU DABO.pdf" class="text-decoration-none mx-3">CV</a>
+            <a href="mailto:sekoudabo884@gmail.com">
+                <i class="fa fa-envelope"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./skills.html">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./blog.html">Blog</a>
+                    </li>
+                    <!--
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- principal -->
+<main>
+    <div class="container-fluid main-custom" id="main-index">
+        <div class="container pt-5 main-custom">
+            <h1 class="text-center my-5">Projects</h1>
+
+            <!-- Porject 1-->
+            <div class="row py-5 my-5 project">
+                <div class="col-12 col-lg-4">
+                    <div id="carouselExampleIndicators-1" class="carousel slide">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="../IMAGES/challenge-project/challenge-home.png" class="d-block w-100 img-project" alt="#">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../IMAGES/challenge-project/Rank.png" class="d-block w-100 img-project" alt="#">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../IMAGES/challenge-project/code-1.png" class="d-block w-100 img-project" alt="#">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../IMAGES/challenge-project/code-2.png" class="d-block w-100 img-project" alt="#">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-1" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-1" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                    <div class="project-title">
+                        <h3 class="my-3">Title:</h3>  
+                        <p class="mb-5"> Data Science Coding Challenge: Loan Default Prediction |<strong>Machine Learning</strong><br><br>
+                        <strong>Rank: better than 70% of my peers</strong>
+                        </p> 
+                    </div>   
+                    <div class="project-description">
+                        <h3 class="mb-3">Description:</h3> 
+                        <p class="mb-5">The goal of this project was to build a classifier that could be used to attribute or not a 
+                        loan to an individual. What my model does at 87%. However, the data presented a bias which is 
+                        that the number of people who were refused the loan was more numerous than those who were granted 
+                        the loan. what should be found in the model. To overcome this, I had to do an oversampling to 35% 
+                        and a model combination, which allowed me to increase the rate of people who are solvent. <br><br>
+                        During this project, I used several techniques including: <strong> [resampling], [here attempted to rebalance 
+                        the gap between the two classes],  [standardization of data] and [the models combined by voting].</strong>
+                        </p> 
+                    </div>
+                    <div class="project-tehnologie">   
+                        <h3 class="mb-3">Technos:</h3>  
+                        <p>Python, scikit-learn, numpy, pandas.
+                        </p>
+                    </div>    
+                    <div class="d-flex justify-content-center mt-5">
+                        <a href="https://hub.labs.coursera.org:443/connect/sharedmfwevgxr?forceRefresh=false&path=%2Fnotebooks%2FLoanDefaultPrediction.ipynb&isLabVersioning=file-prep" target="_blank" rel="noopener noreferrer">
+                            <button type="button" class="btn btn-primary" class="recommend_btn">Coursera link</button></a>
+                    </div>  
+                </div>
+            </div>
+
+            <!-- Porject 2-->
+            <div class="row py-5 my-5 project">
+                <div class="col-12 col-lg-4">
+                    <div id="carouselExampleIndicators-2" class="carousel slide">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="../IMAGES/travel-projet/banner.jpg" class="d-block w-100 img-project" alt="#">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../IMAGES/travel-projet/preprocessing.png" class="d-block w-100 img-project" alt="#">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../IMAGES/travel-projet/modeling.png" class="d-block w-100 img-project" alt="#">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../IMAGES/travel-projet/code-1.png" class="d-block w-100 img-project" alt="#">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="../IMAGES/travel-projet/code-2.png" class="d-block w-100 img-project" alt="#">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators-2" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators-2" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                    <div class="project-title">
+                        <h3 class="my-3">Title:</h3>  
+                        <p class="mb-5"> Regression Plane Price Prediction |<strong>Machine Learning</strong><br><br>
+                        <strong>Precision (r2_score): 97%</strong>
+                        </p> 
+                    </div>   
+                    <div class="project-description">
+                        <h3 class="mb-3">Description:</h3> 
+                        <p class="mb-5">The goal of this project is to address a specific issue: predicting airfare prices between different cities in India using data science techniques. To achieve this objective, I have employed a traditional data science problem-solving approach, which I have divided into two essential stages.
+                            The first stage is "preprocessing," and it includes [data acquisition], [cleaning], and [exploratory analysis].
+                            The second part is dedicated to [modeling] and [validation]. <br><br>
+                            During this project, I utilized techniques such as: <strong> [Outlier Detection], [Correlation Analysis] ,[Feature Engineering], 
+                                [Duplicate Detection], [Data Exploration], [Variable Encoding], [Data Splitting], [Grid Search], [Cross Validation] and [Time Complexity]</strong>
+                        </p> 
+                    </div>
+                    <div class="project-tehnologie">   
+                        <h3 class="mb-3">Technos:</h3>  
+                        <p>Python, scikit-learn, numpy, pandas, scipy.
+                        </p>
+                    </div>    
+                    <div class="d-flex justify-content-center mt-5">
+                        <a href="https://github.com/NirSheva/Regression-plane-price-prediction/tree/main" target="_blank" rel="noopener noreferrer">
+                            <button type="button" class="btn btn-primary" class="recommend_btn">Github link</button></a>
+                    </div>  
+                </div>
+            </div>
+        
+        
+        
+        </div>
+    </div>
+</main>
+
+
+
+<!-- footer-->
+<footer class="border-top footer-custom">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col">
+                <ul class="list-inline mb-0 d-flex align-items-center justify-content-center">
+                    <li class="list-inline-item mx-3">
+                        <a href="#" class="text-decoration-none text-social-black">
+                            <i class="fab fa-linkedin fa-3x"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item mx-3">
+                        <a href="#" class="text-decoration-none text-social-black">
+                            <i class="fab fa-instagram-square fa-3x"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item mx-3">
+                        <a href="#" class="text-decoration-none text-social-black">
+                            <i class="fab fa-twitter-square fa-3x"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="align-items-center justify-content-center text-center">
+        <p>&copy; 2023 Sékou Dabo. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- go at the top-->
+<div id="scrollToTopButton">
+    <a href="#">
+        <!--Add the code here for the logo to appear and the icon to be actionable-->
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="white" width="60px">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+    </a>
+</div>
+
+<!-- Bootstrap JS bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+</body>
+</html>
