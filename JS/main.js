@@ -1,31 +1,83 @@
-//localStorage.clear();
-
-// Définition de la variable template
+// define variable template
 const template = document.getElementById('recommendation-template');
 
 // Asynchronous function to fetch recommendations from local storage or a JSON file
 async function fetchRecommendations() {
-  let allRecommendations = window.localStorage.getItem('recommendations');
-  // Set allRecommendations to null to force data fetch
-  // allRecommendations = null;
-  if (allRecommendations === null) {
-    console.log("Fetching recommendations...");
-    try {
-      const response = await fetch("./DATABASE/recommendations.json");
-      allRecommendations = await response.json();
+  
+  // retrieve localStorage data
+  let allRecommendations_local = window.localStorage.getItem('recommendations');
+  // Fetching recommendations in db
+  let allRecommendations_db;
+  try {
+    const response = await fetch("./DATABASE/recommendations.json");
+    allRecommendations_db = await response.json();
 
-      // Save fetched data to local storage
-      window.localStorage.setItem("recommendations", JSON.stringify(allRecommendations));
-      return allRecommendations;
-    } catch (error) {
-      console.error("Error fetching data from JSON file:", error);
-    }
+  } catch (error) {
+    console.error("Error fetching data from JSON file:", error);
+  }
+
+  // Compare the two databases
+  if (allRecommendations_local === null) {
+
+    // Save fetched data to local storage
+    window.localStorage.setItem("recommendations", JSON.stringify(allRecommendations_db));
+    return allRecommendations_db;
   } else {
-    console.log("Data found in local storage.");
-    allRecommendations = JSON.parse(allRecommendations);
-    return allRecommendations;
+    allRecommendations_local = JSON.parse(allRecommendations_local);
+
+    if (allRecommendations_db.length > allRecommendations_local.length) {
+      localStorage.clear();
+      // Update data in local storage
+      window.localStorage.setItem("recommendations", JSON.stringify(allRecommendations_db));
+      return allRecommendations_db;
+    } else {
+      // Use local data
+      return allRecommendations_local;
+    }
   }
 }
+
+
+/*// define variable template
+const template = document.getElementById('recommendation-template');
+
+// Asynchronous function to fetch recommendations from local storage or a JSON file
+async function fetchRecommendations() {
+  
+  // retrieve localStorage data
+  let allRecommendations_local = window.localStorage.getItem('recommendations');
+//Fetching recommendations in db
+  let allRecommendations_db;
+  try {
+    const response = await fetch("./DATABASE/recommendations.json");
+    allRecommendations_db = await response.json();
+
+  } catch (error) {
+    console.error("Error fetching data from JSON file:", error);
+  }
+
+ //### compare the two data base
+  // allRecommendations = null;
+  if (allRecommendations_local === null) {
+
+    // Save fetched data to local storage
+    window.localStorage.setItem("recommendations", JSON.stringify(allRecommendations_db));
+    return allRecommendations_db;
+
+  }else{
+    allRecommendations_local = JSON.parse(allRecommendations_local);
+
+    if(allRecommendations_db.length > allRecommendations_local.length){
+      localStorage.clear();
+      // update data to local storage
+      window.localStorage.setItem("recommendations", JSON.stringify(allRecommendations_db));
+      return allRecommendations_db;
+    }else{
+      // use local data
+      return allRecommendations_local;
+    }
+  }
+}*/
 
 // Function to display a popup for adding a new recommendation
 function showPopup(bool) {
@@ -132,7 +184,6 @@ async function addRecommendation() {
       allRecommendations = JSON.parse(allRecommendations);
       allRecommendations.unshift(recommendation);
 
-      localStorage.clear();
       // Save updated recommendations to local storage
       window.localStorage.setItem("recommendations", JSON.stringify(allRecommendations));
     } catch (error) {
