@@ -109,6 +109,23 @@ async function addRecommendation() {
       "datetime": dateString
     };
 
+    //##########  my emailJS metadata ######
+    const serviceID = 'default_service';
+    const templateID = 'template_nsh2bsg';
+    emailjs.init("pBWv-y55FWYkXsyTC");
+    //######################################
+  
+
+    emailjs.send(serviceID, templateID, {
+      author: valInput,
+      content: valTextarea,
+      date: dateString,
+    }).then(function(response) {
+      console.log("Recommendation sent successfully !");
+    }, function(error) {
+      console.error("An error has occurred. Error details: ", error);
+    });    
+
     try {
       // Add the new recommendation to the beginning of the array
       let allRecommendations = window.localStorage.getItem('recommendations');
