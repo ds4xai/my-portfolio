@@ -228,15 +228,16 @@ h1, h3, h5, .introduction {
 
 .card-text {
   font-family: 'Gill Sans', 'Times New Roman', 'Lucida Grande';
-  overflow: auto;
+  overflow:scroll;
   height: 75%;
   margin: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:first baseline;
   align-items: center;
   text-align: justify;
-  text-align: center;
+  text-align: left;
+  white-space: pre-line;
 }
 
 .card-date{
