@@ -6,6 +6,8 @@ body {
 
 /* Banner Styles */
 #banner {
+  width: 100%;
+  margin: 0;
   background-image: url("../IMAGES/banner2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,6 +50,8 @@ h1, h3, h5, .introduction {
 
 /* Navbar Styles */
 .navbar-custom {
+  width: 100%;
+  margin: 0;
   background-color: #DDD0C8;
   height: 100px;
   border-bottom: 1px solid #000000;
@@ -116,23 +120,23 @@ h1, h3, h5, .introduction {
   display:block;
   border: 2px solid black;
   border-radius: 5px;
-  height: 250px;
+  height: 300px;
 }
 
 /* Typed Text Animation Styles */
 #typed-title {
-  white-space: nowrap;
-  overflow: hidden;
+  white-space: wrap;
+ /* overflow:inherit;
   width: 0;
-  animation: type-title 5s steps(206) forwards;
+  animation: type-title 5s steps(106) forwards;*/
 }
 
 #typed-quote {
-  white-space: nowrap;
-  overflow: hidden;
+  white-space: wrap;
+  /*overflow:inherit;
   width: 0;
   animation: type-quote 5s steps(206) forwards;
-  animation-delay: 5s;
+  animation-delay: 5s;*/
 }
 
 @keyframes type-title {
@@ -229,9 +233,8 @@ h1, h3, h5, .introduction {
 
 .card-text {
   font-family: 'Gill Sans', 'Times New Roman', 'Lucida Grande';
-  overflow:scroll;
-  height: 75%;
-  margin: 5px;
+  overflow: scroll;
+  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content:first baseline;
@@ -246,11 +249,7 @@ h1, h3, h5, .introduction {
   font-size: small;
   padding-right: 5px;
   font-weight: bolder;
-}
-
-#new-recommendation, #title-recommendation{
-  border: 2px solid black;
-  border-radius: 5px;
+  margin-top: 2px;
 }
 
 /* Change the color of the “Next” and “Previous” button */
@@ -269,3 +268,45 @@ h1, h3, h5, .introduction {
   padding: 3px;
   border-radius: 10px;
 }
+
+#form{
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+}
+
+#new-recommendation {
+  display: flex;
+  margin: auto;
+  width: 90%; 
+  height: 200px; 
+  resize: vertical; 
+  box-sizing: border-box; 
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+#title-recommendation{
+  display: flex;
+  margin: auto;
+  width: 90%; 
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  #new-recommendation {
+    display: flex;
+    margin: auto;
+    width: 500px; 
+    height: 200px; 
+    resize: vertical; 
+  }
+
+  #title-recommendation {
+    margin: auto;
+    width: 500px; 
+  }
+}
+

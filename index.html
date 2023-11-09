@@ -126,9 +126,9 @@
                     <template id="recommendation-template">
                         <div class="carousel-item"> <!--the first item must have the active class at this level-->
                             <div class="card w-md-100 w-50 mx-auto">
-                            <div class="card-body p-3">
+                            <div class="card-body w-md-100 p-3">
                                 <h6 class="card-title owner">Recommendation owner</h5>
-                                <p class="card-text p-2 w-80 mx-auto my-1">Your recommendation</p>
+                                <p class="card-text p-2 w-90 mx-auto my-1">Your recommendation</p>
                                 <div class="date-container">
                                 <time datetime="2023-10-29T12:00:00" class="card-date"></time>
                                 </div>
@@ -153,15 +153,13 @@
             <div class="container" id="recommendations-form">
                 <!-- Recommendation Form -->
                 <div id="contact">
-                    <div class="d-flex justify-content-center">
-                        <fieldset>
-                            <legend class="introduction">Leave a recommendation</legend>
-                            <input id="title-recommendation" type="text" placeholder="Status & Name (Optional)"><br/><br/>
-                            <textarea id="new-recommendation" cols="50" rows="6" placeholder="Message"></textarea>
-                            <div class="d-flex justify-content-center my-3">
-                                <button type="button" class="btn btn-primary" id="recommend_btn" onclick="addRecommendation()">Submit</button>
-                            </div>
-                        </fieldset>
+                    <div id="form">
+                        <h2 class="introduction text-wrap my-3">Leave a recommendation</h2>
+                        <input id="title-recommendation"  type="text" placeholder="Status & Name (Optional)"><br/><br/>
+                        <textarea id="new-recommendation"  placeholder="Message"></textarea>
+                        <div class="d-flex justify-content-center my-3">
+                            <button type="button" class="btn btn-primary" id="recommend_btn" onclick="addRecommendation()">Submit</button>
+                        </div>
                     </div>
                 </div>
             </div>
