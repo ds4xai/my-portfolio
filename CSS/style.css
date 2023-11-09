@@ -95,6 +95,7 @@ h1, h3, h5, .introduction {
 /* Other Styles */
 .skill, .project {
   border-bottom: 1px solid #000000;
+  padding: 1.2em;
 }
 
 .skill {
@@ -150,6 +151,11 @@ h1, h3, h5, .introduction {
 .project-tehnologie h3 {
   text-align: left;
   font-size: 1.2em;
+}
+
+.project-description, .project-title, .project-tehnologie{
+  background-color: #7600bc !important;
+  padding: 1em;
 }
 
 /* Social Media Icon Button */
