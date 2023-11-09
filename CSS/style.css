@@ -126,17 +126,10 @@ h1, h3, h5, .introduction {
 /* Typed Text Animation Styles */
 #typed-title {
   white-space: wrap;
- /* overflow:inherit;
-  width: 0;
-  animation: type-title 5s steps(106) forwards;*/
 }
 
 #typed-quote {
   white-space: wrap;
-  /*overflow:inherit;
-  width: 0;
-  animation: type-quote 5s steps(206) forwards;
-  animation-delay: 5s;*/
 }
 
 @keyframes type-title {
