@@ -1,3 +1,4 @@
+//localStorage.clear();
 // define variable template
 const template = document.getElementById('recommendation-template');
 
