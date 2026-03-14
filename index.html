@@ -1,67 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Researcher Portfolio</title>
+  <title>Sékou Dabo — Research</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet" />
 
-  <!-- ============================================================
-                             CONFIGURATION 
-       ============================================================ -->
+  <!-- ════════════════════════════════════════════════
+       DATA — éditez uniquement ce bloc
+  ════════════════════════════════════════════════ -->
   <script>
-    const DATA = {
-      // ─── Personal info ──────────────────────────────────────────
-      name: "Sékou Dabo",
-      title: "PhD Candidate · Machine Learning & Explainable AI",
-      affiliation: "CY Cergy Paris Université — CYU — ETIS Lab",
-      email: "dabo.sekou@cyu.fr",
-      photo: "./IMAGES/id_photo_sekou_dabo.jpg",
-      initials: "DS",
+  const DATA = {
+    name:        "Sékou Dabo",
+    initials:    "DS",
+    title:       "PhD Candidate · Machine Learning & Explainable AI",
+    affiliation: "CY Cergy Paris Université — ETIS Lab",
+    email:       "dabo.sekou@cyu.fr",
+    photo:       "./IMAGES/id_photo_sekou_dabo.jpg",
 
-      // ─── Social links ───────────────────────
-      links: {
-        scholar: "https://scholar.google.com/citations?user=0uVPKNEAAAAJ&hl=fr",
-        github: "https://github.com/ds4xai",
-        linkedin: "https://www.linkedin.com/in/sekou-dabo",
-        twitter: "",
-        cv: "./RESSOURCES/CV_SEKOU_DABO.pdf",
-        orcid: "https://orcid.org/0009-0009-6020-368X",
-      },
+    links: {
+      scholar:  "https://scholar.google.com/citations?user=0uVPKNEAAAAJ&hl=fr",
+      github:   "https://github.com/ds4xai",
+      linkedin: "https://www.linkedin.com/in/sekou-dabo",
+      twitter:  "",
+      cv:       "./RESSOURCES/CV_SEKOU_DABO.pdf",
+      orcid:    "https://orcid.org/0009-0009-6020-368X",
+    },
 
-      // ─── bio ────────────────────────────────
-        bio: `I am a PhD candidate at <strong><a href="https://www.cyu.fr/" target="_blank" rel="noopener">CYU — CY Cergy Paris Université</a></strong>, working at the intersection of <em>machine learning</em>, <em>explainability</em>, and <em>interpretability</em>. My research aims to make AI systems more transparent, reliable, and trustworthy — with applications across agriculture, healthcare, environmental monitoring, and critical decision-making.
+    bio: `I am a PhD candidate at <strong><a href="https://www.cyu.fr/" target="_blank" rel="noopener">CYU — CY Cergy Paris Université</a></strong>, working at the intersection of <em>machine learning</em>, <em>explainability</em>, and <em>interpretability</em>. My research aims to make AI systems more transparent, reliable, and trustworthy — with applications across agriculture, healthcare, environmental monitoring, and critical decision-making.
 <br/><br/>
 My thesis, titled <em>"Explainability of Deep Learning Models Applied to Satellite Image Time Series for Crop Mapping"</em>, is conducted at <strong><a href="https://www.etis-lab.fr/" target="_blank" rel="noopener">ETIS Lab</a></strong>. I am supervised by <a href="https://scholar.google.com/citations?user=MdUjsa8AAAAJ&hl=en" target="_blank" rel="noopener">Prof. Vassilis Christophides</a> (Full Professor, ENSEA), co-supervised by <a href="https://scholar.google.com/citations?user=7LlyF3IAAAAJ&hl=fr" target="_blank" rel="noopener">Dr. Michele Linardi</a> (Assistant Professor, CYU) and <a href="https://people.utwente.nl/c.paris" target="_blank" rel="noopener">Dr. Claudia Paris</a> (Assistant Professor, University of Twente).
 <br/><br/>
 Previously, I received my Master's degree in Artificial Intelligence & Data Science from <strong>Mundiapolis University</strong>, Casablanca, Morocco.`,
 
-      // ─── Research interests ──────────────────────────────────────
-      interests: [
-        "Machine Learning",
-        "Explainable AI (XAI)",
-        "Remote Sensing and Crop Mapping",
-        "Causal Inference & Estimation",
-        "Feature Attribution",
-        "Deep Learning",
-        "Healthcare AI",
-        "Fairness & Robustness",
-      ],
+    interests: [
+      "Machine Learning",
+      "Explainable AI (XAI)",
+      "Remote Sensing & Crop Mapping",
+      "Causal Inference & Estimation",
+      "Feature Attribution",
+      "Deep Learning",
+      "Healthcare AI",
+      "Fairness & Robustness",
+    ],
 
-      // ─── News items ──────────────────────────────────────────────
-        news: [
+    news: [
       { date: "2026", text: "📄 New paper accepted at the <strong>Workshops of EDBT/ICDT 2026</strong> (Tampere, Finland): <em>Rethinking HyperSpectral Image Classification (HSIC) Benchmark with Explainability (xAI) under a Causal Estimation Perspective</em>." },
       { date: "2025", text: "🎉 Paper published at <strong>IGARSS 2025</strong> — IEEE International Geoscience and Remote Sensing Symposium: <em>Optimizing Deep Learning for Satellite Hyperspectral Data: an xAI-Driven Approach to Hyperparameter Selection</em>. Pages 7602–7606. <a href='https://doi.org/10.1109/IGARSS55030.2025.11243437' target='_blank' rel='noopener'>DOI →</a>" },
       { date: "2024", text: "🎓 Completed Master's degree in AI & Data Science at <strong>Mundiapolis University</strong>, Casablanca." },
       { date: "2023", text: "🏆 Ranked <strong>top 30%</strong> in a competitive Data Science Coding Challenge on Loan Default Prediction." },
     ],
 
-
-      // ─── Publications ────────────────────────────────────────────
-      // type: "conference" | "journal" | "workshop" | "preprint"
-      publications: [
-       {
+    publications: [
+      {
         id: "pub1",
         type: "conference",
         title: "Optimizing Deep Learning for Satellite Hyperspectral Data: an xAI-Driven Approach to Hyperparameter Selection",
@@ -69,17 +61,11 @@ Previously, I received my Master's degree in Artificial Intelligence & Data Scie
         venue: "IEEE International Geoscience and Remote Sensing Symposium (IGARSS)",
         year: 2025,
         tags: ["Explainable AI", "Hyperspectral Imaging", "Deep Learning", "Transformers", "PRISMA"],
-        links: {
-            github: "https://github.com/ds4xai/xAIDrivenHyperOpt.git", 
-            pdf: "https://doi.org/10.1109/IGARSS55030.2025.11243437",
-            code: "",
-            slides: "",
-            poster: "",
-        },
+        links: { pdf: "https://doi.org/10.1109/IGARSS55030.2025.11243437", github: "https://github.com/ds4xai/xAIDrivenHyperOpt", code: "", slides: "", poster: "" },
         abstract: "We propose an xAI-driven methodology for hyperparameter selection in deep learning models applied to satellite hyperspectral data. By leveraging explainability techniques, we guide the optimization process to improve model adaptation on PRISMA hyperspectral imagery — reducing computational cost while maintaining high performance across atmospheric and spectral modeling tasks.",
         highlight: true,
-        },
-        {
+      },
+      {
         id: "pub2",
         type: "workshop",
         title: "Rethinking HyperSpectral Image Classification (HSIC) Benchmark with Explainability (xAI) under a Causal Estimation Perspective",
@@ -87,33 +73,26 @@ Previously, I received my Master's degree in Artificial Intelligence & Data Scie
         venue: "Workshops of the EDBT/ICDT 2026 Joint Conference",
         year: 2026,
         tags: ["Explainable AI", "Hyperspectral Imaging", "Causality", "Benchmarking", "HSIC"],
-        links: {
-            github: "https://github.com/ds4xai/ReX-HSIC.git", 
-            pdf: "",   
-            code: "",
-            slides: "",
-            poster: "",
-        },
-        abstract: "soon",
+        links: { github: "https://github.com/ds4xai/ReX-HSIC", pdf: "", code: "", slides: "", poster: "" },
+        abstract: "We revisit the standard benchmarking methodology for Hyperspectral Image Classification (HSIC) through the lens of explainability and causal estimation. By integrating xAI techniques with a causal perspective, we highlight limitations of existing evaluation protocols and propose a more principled framework for assessing model performance on hyperspectral data.",
         highlight: false,
-        },
-      ],
+      },
+    ],
 
-      // ─── Projects ────────────────────────────────────────────────
-      projects: [
-        {
+    projects: [
+      {
         title: "Neural Networks with NumPy",
         subtitle: "Deep Learning · Pedagogy · Mar 2024",
-        description: "A hands-on article and codebase demystifying deep learning by building neural networks from scratch using only NumPy — no framework. Covers classification (MNIST handwritten digits) and regression (Paris Housing prices from Kaggle 2021), demonstrating that the fundamentals of AI are accessible with algebra, statistics, and basic calculus.",
+        description: "A hands-on article demystifying deep learning by building neural networks from scratch using only NumPy — no framework. Covers classification (MNIST handwritten digits) and regression (Paris Housing prices), demonstrating that AI fundamentals are accessible with algebra, statistics, and basic calculus.",
         tags: ["From Scratch", "Python", "NumPy", "Neural Networks", "MNIST", "Regression"],
         links: { github: "https://github.com/ds4xai/nn-with-numpy-4-intuitive-comprehension" },
         status: "Published",
-        Datasets: "MNIST classification · Paris Housing regression",
+        metric: "MNIST classification · Paris Housing regression",
       },
       {
         title: "Amazon Deforestation Analysis",
         subtitle: "Computer Vision · Environmental Science · Nov 2023",
-        description: "Quantified deforestation in the Rondônia region of the Amazon forest between 2000 and 2012 using NASA satellite imagery. Applied image processing, mathematical morphology operators (erosion, dilation, closure) and convolution to accurately measure forest cover loss over a decade.",
+        description: "Quantified deforestation in the Rondônia region of the Amazon forest between 2000 and 2012 using NASA satellite imagery. Applied image processing, mathematical morphology operators (erosion, dilation, closure) and convolution to accurately measure forest cover loss.",
         tags: ["Python", "OpenCV", "NumPy", "Computer Vision", "Mathematical Morphology", "NASA"],
         links: { github: "https://github.com/ds4xai/computer-vision-deforestation-rate" },
         status: "Published",
@@ -122,726 +101,368 @@ Previously, I received my Master's degree in Artificial Intelligence & Data Scie
       {
         title: "Loan Default Prediction",
         subtitle: "Machine Learning · Classification · Sep 2023",
-        description: "Built a classifier to predict individual loan eligibility on a highly imbalanced dataset. Applied 35% oversampling to rebalance classes and combined models via a voting ensemble — reaching <strong>87% accuracy</strong> and ranking in the <strong>top 30%</strong> of participants in a competitive coding challenge.",
+        description: "Built a classifier to predict individual loan eligibility on a highly imbalanced dataset. Applied 35% oversampling and combined models via a voting ensemble — reaching <strong>87% accuracy</strong> and ranking in the <strong>top 30%</strong> of a competitive coding challenge.",
         tags: ["Python", "scikit-learn", "NumPy", "Pandas", "Resampling", "Ensemble Learning"],
         links: { demo: "https://hub.labs.coursera.org/connect/sharedmfwevgxr?forceRefresh=false&path=%2Fnotebooks%2FLoanDefaultPrediction.ipynb&isLabVersioning=file-prep" },
         status: "Published",
         metric: "87% Accuracy · Top 30%",
       },
-      ],
+    ],
 
-      // ─── Teaching ────────────────────────────────────────────────
     teaching: [
       { course: "Web Integration — HTML, CSS, JavaScript", role: "Teaching Assistant", institution: "IUT Cergy-Pontoise (CYU)", institutionUrl: "https://cyiut.cyu.fr/", year: "2026", hours: "46h", level: "BUT 1st year · MMI – Web Development" },
       { course: "Advanced Python & Web Integration",       role: "Teaching Assistant", institution: "IUT Cergy-Pontoise (CYU)", institutionUrl: "https://cyiut.cyu.fr/", year: "2025–2026", hours: "18h", level: "BUT 3rd year · MMI – Web Development" },
     ],
-    };
+  };
   </script>
 
   <style>
-    /* ── Reset & tokens ─────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      --bg:          #0f0f11;
-      --bg2:         #161619;
-      --bg3:         #1e1e23;
-      --border:      rgba(255,255,255,.07);
-      --border2:     rgba(255,255,255,.12);
-      --text:        #e8e4dd;
-      --text2:       #9a9690;
-      --text3:       #615e59;
-      --accent:      #c8a96e;   /* warm gold */
-      --accent2:     #7fb5a8;   /* teal */
-      --accent3:     #a87b9e;   /* mauve */
-      --red:         #c96e6e;
-      --highlight:   rgba(200,169,110,.08);
-      --sans:        'Source Serif 4', Georgia, serif;
-      --mono:        'DM Mono', monospace;
-      --display:     'Cormorant Garamond', Georgia, serif;
-      --sidebar-w:   280px;
-      --radius:      6px;
-      --shadow:      0 4px 32px rgba(0,0,0,.5);
+    /* ══════════════════════════════════════
+       LIGHT THEME (default)
+    ══════════════════════════════════════ */
+    :root,
+    [data-theme="light"] {
+      --bg:           #ffffff;
+      --bg2:          #f4f7fd;
+      --bg3:          #e8edf8;
+      --sb-bg:        #0d2853;
+      --sb-bg2:       #081e3f;
+      --sb-acc:       #4fa3ff;
+      --sb-text:      #c4d4ee;
+      --sb-text2:     #7fa0cc;
+      --sb-text3:     #3f5f8a;
+      --border:       #dde4f0;
+      --border2:      #bfcde4;
+      --text:         #111c35;
+      --text2:        #3d4f70;
+      --text3:        #7d8eaa;
+      --accent:       #1755c8;
+      --accent2:      #0c9e88;
+      --accent3:      #7040b0;
+      --hl:           rgba(23,85,200,.05);
+      --card-bg:      #ffffff;
+      --tag-bg:       #f4f7fd;
+      --shadow-card:  0 2px 12px rgba(23,85,200,.07);
+
+      /* toggle button */
+      --toggle-bg:    #e8edf8;
+      --toggle-icon:  "🌙";
     }
 
+    /* ══════════════════════════════════════
+       DARK THEME
+    ══════════════════════════════════════ */
+    [data-theme="dark"] {
+      --bg:           #0f0f11;
+      --bg2:          #161619;
+      --bg3:          #1e1e23;
+      --sb-bg:        #161619;
+      --sb-bg2:       #0f0f11;
+      --sb-acc:       #c8a96e;
+      --sb-text:      #e8e4dd;
+      --sb-text2:     #9a9690;
+      --sb-text3:     #615e59;
+      --border:       rgba(255,255,255,.07);
+      --border2:      rgba(255,255,255,.13);
+      --text:         #e8e4dd;
+      --text2:        #9a9690;
+      --text3:        #615e59;
+      --accent:       #c8a96e;
+      --accent2:      #7fb5a8;
+      --accent3:      #a87b9e;
+      --hl:           rgba(200,169,110,.08);
+      --card-bg:      #161619;
+      --tag-bg:       #1e1e23;
+      --shadow-card:  0 2px 16px rgba(0,0,0,.4);
+
+      --toggle-bg:    #1e1e23;
+      --toggle-icon:  "☀";
+    }
+
+    /* ══════════════════════════════════════
+       TRANSITIONS
+    ══════════════════════════════════════ */
+    body, .sidebar, .pub-card, .project-card, .skill-card,
+    .teaching-item, .contact-box, .news-item {
+      transition: background-color .3s, border-color .3s, color .3s;
+    }
+
+    /* ══════════════════════════════════════
+       BASE
+    ══════════════════════════════════════ */
     html { scroll-behavior: smooth; }
 
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: var(--sans);
+      font-family: 'Source Serif 4', Georgia, serif;
       font-size: 16px;
       line-height: 1.75;
       min-height: 100vh;
     }
 
     a { color: var(--accent); text-decoration: none; transition: opacity .2s; }
-    a:hover { opacity: .75; }
+    a:hover { opacity: .72; }
 
-    /* ── Layout ─────────────────────────────────────────────── */
-    .layout {
+    .layout { display: flex; min-height: 100vh; }
+
+    /* ══════════════════════════════════════
+       THEME TOGGLE BUTTON
+    ══════════════════════════════════════ */
+    .theme-toggle {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 300;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--border2);
+      background: var(--toggle-bg);
+      cursor: pointer;
       display: flex;
-      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,.15);
+      transition: all .25s;
     }
 
-    /* ── Sidebar ─────────────────────────────────────────────── */
+    .theme-toggle:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 20px rgba(0,0,0,.2);
+    }
+
+    /* sun/moon icons */
+    .icon-sun, .icon-moon { transition: opacity .2s, transform .2s; }
+    [data-theme="light"] .icon-sun  { display: none; }
+    [data-theme="light"] .icon-moon { display: block; }
+    [data-theme="dark"]  .icon-moon { display: none; }
+    [data-theme="dark"]  .icon-sun  { display: block; }
+
+    /* ══════════════════════════════════════
+       SIDEBAR
+    ══════════════════════════════════════ */
     .sidebar {
-      width: var(--sidebar-w);
+      width: 280px;
       flex-shrink: 0;
       position: fixed;
       top: 0; left: 0; bottom: 0;
       overflow-y: auto;
-      background: var(--bg2);
+      background: var(--sb-bg);
       border-right: 1px solid var(--border);
       display: flex;
       flex-direction: column;
       z-index: 100;
     }
 
-    .sidebar-inner {
-      padding: 40px 28px 32px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
+    .sidebar-inner { padding: 40px 28px 32px; flex: 1; display: flex; flex-direction: column; }
 
     .avatar {
-      width: 96px;
-      height: 96px;
+      width: 96px; height: 96px;
       border-radius: 50%;
-      background: var(--bg3);
-      border: 2px solid var(--border2);
+      background: var(--sb-bg2);
+      border: 2px solid rgba(255,255,255,.15);
+      box-shadow: 0 0 0 5px rgba(79,163,255,.1);
       overflow: hidden;
       margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--display);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 2rem;
-      color: var(--accent);
+      color: var(--sb-acc);
       letter-spacing: .05em;
     }
-
     .avatar img { width: 100%; height: 100%; object-fit: cover; }
 
-    .sidebar-name {
-      font-family: var(--display);
-      font-size: 1.35rem;
-      font-weight: 600;
-      line-height: 1.3;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
+    .sidebar-name  { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.35rem; font-weight: 600; line-height: 1.3; color: #fff; margin-bottom: 6px; }
+    .sidebar-title { font-size: .77rem; color: var(--sb-text2); line-height: 1.5; margin-bottom: 4px; }
+    .sidebar-affil { font-size: .74rem; color: var(--sb-text3); font-style: italic; margin-bottom: 20px; }
 
-    .sidebar-title {
-      font-size: .78rem;
-      color: var(--text2);
-      line-height: 1.5;
-      margin-bottom: 4px;
-    }
-
-    .sidebar-affil {
-      font-size: .75rem;
-      color: var(--text3);
-      font-style: italic;
-      margin-bottom: 20px;
-    }
-
-    .social-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-bottom: 28px;
-    }
-
+    .social-links { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
     .social-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: .72rem;
-      font-family: var(--mono);
-      color: var(--text2);
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      padding: 4px 9px;
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: .71rem; font-family: 'DM Mono', monospace;
+      color: var(--sb-text2);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 3px; padding: 4px 9px;
       transition: all .2s;
     }
+    .social-links a:hover { color: var(--sb-acc); border-color: rgba(255,255,255,.25); opacity: 1; }
 
-    .social-links a:hover {
-      color: var(--accent);
-      border-color: var(--accent);
-      opacity: 1;
-    }
+    .nav-label { font-family: 'DM Mono', monospace; font-size: .64rem; letter-spacing: .13em; color: var(--sb-text3); text-transform: uppercase; margin-bottom: 10px; margin-top: 4px; }
 
-    /* Sidebar nav */
-    .nav-label {
-      font-family: var(--mono);
-      font-size: .65rem;
-      letter-spacing: .12em;
-      color: var(--text3);
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      margin-top: 4px;
-    }
-
-    .sidebar-nav {
-      list-style: none;
-      margin-bottom: 28px;
-    }
-
+    .sidebar-nav { list-style: none; margin-bottom: 28px; }
     .sidebar-nav li a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 7px 10px;
-      border-radius: var(--radius);
-      font-size: .82rem;
-      color: var(--text2);
-      transition: all .2s;
-      font-family: var(--sans);
-      font-weight: 300;
+      display: flex; align-items: center; gap: 10px;
+      padding: 7px 10px; border-radius: 6px;
+      font-size: .81rem; color: var(--sb-text2);
+      transition: all .2s; font-weight: 300;
     }
-
-    .sidebar-nav li a:hover,
+    .sidebar-nav li a:hover { color: #fff; background: rgba(255,255,255,.06); opacity: 1; }
     .sidebar-nav li a.active {
-      color: var(--text);
-      background: rgba(255,255,255,.04);
-      opacity: 1;
+      color: var(--sb-acc);
+      background: rgba(255,255,255,.06);
+      border-left: 2px solid var(--sb-acc);
+      padding-left: 8px; opacity: 1;
     }
-
-    .sidebar-nav li a.active {
-      color: var(--accent);
-      border-left: 2px solid var(--accent);
-      padding-left: 8px;
-    }
-
-    .nav-icon { opacity: .5; font-size: .9em; }
 
     .sidebar-footer {
       margin-top: auto;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-      font-size: .68rem;
-      color: var(--text3);
-      font-family: var(--mono);
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      font-size: .67rem; color: var(--sb-text3); font-family: 'DM Mono', monospace;
     }
 
-    /* ── Main content ─────────────────────────────────────────── */
-    .main {
-      margin-left: var(--sidebar-w);
-      flex: 1;
-      max-width: 860px;
-      padding: 60px 64px 100px;
-    }
+    /* ══════════════════════════════════════
+       MAIN
+    ══════════════════════════════════════ */
+    .main { margin-left: 280px; flex: 1; max-width: 860px; padding: 60px 64px 100px; }
 
-    /* ── Section ─────────────────────────────────────────────── */
-    .section {
-      margin-bottom: 72px;
-      opacity: 0;
-      transform: translateY(16px);
-      animation: fadeUp .5s forwards;
-    }
+    /* Sections */
+    .section { margin-bottom: 72px; opacity: 0; transform: translateY(16px); animation: fadeUp .5s forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: none; } }
+    .section:nth-child(1){animation-delay:.05s} .section:nth-child(2){animation-delay:.12s}
+    .section:nth-child(3){animation-delay:.18s} .section:nth-child(4){animation-delay:.24s}
+    .section:nth-child(5){animation-delay:.30s} .section:nth-child(6){animation-delay:.36s}
+    .section:nth-child(7){animation-delay:.42s} .section:nth-child(8){animation-delay:.48s}
 
-    @keyframes fadeUp {
-      to { opacity: 1; transform: none; }
-    }
+    .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 28px; }
+    .section-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.7rem; font-weight: 600; color: var(--text); letter-spacing: -.01em; }
+    .section-line { flex: 1; height: 1px; background: var(--border); }
 
-    .section:nth-child(1) { animation-delay: .05s; }
-    .section:nth-child(2) { animation-delay: .12s; }
-    .section:nth-child(3) { animation-delay: .18s; }
-    .section:nth-child(4) { animation-delay: .24s; }
-    .section:nth-child(5) { animation-delay: .30s; }
-    .section:nth-child(6) { animation-delay: .36s; }
-    .section:nth-child(7) { animation-delay: .42s; }
-
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-      margin-bottom: 28px;
-    }
-
-    .section-title {
-      font-family: var(--display);
-      font-size: 1.7rem;
-      font-weight: 600;
-      color: var(--text);
-      letter-spacing: -.01em;
-    }
-
-    .section-line {
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-
-    /* ── Hero ─────────────────────────────────────────────────── */
-    .hero {
-      padding: 0 0 48px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 64px;
-    }
-
-    .hero-eyebrow {
-      font-family: var(--mono);
-      font-size: .72rem;
-      letter-spacing: .15em;
-      color: var(--accent);
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-
-    .hero-name {
-      font-family: var(--display);
-      font-size: 3.4rem;
-      font-weight: 300;
-      line-height: 1.1;
-      color: var(--text);
-      margin-bottom: 12px;
-    }
-
+    /* Hero */
+    .hero { padding: 0 0 48px; border-bottom: 1px solid var(--border); margin-bottom: 64px; }
+    .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: .71rem; letter-spacing: .15em; color: var(--accent); text-transform: uppercase; margin-bottom: 16px; }
+    .hero-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 3.4rem; font-weight: 300; line-height: 1.1; color: var(--text); margin-bottom: 12px; }
     .hero-name em { font-style: italic; color: var(--accent); }
-
-    .hero-sub {
-      font-size: 1rem;
-      color: var(--text2);
-      margin-bottom: 28px;
-      font-weight: 300;
-    }
-
+    .hero-sub { font-size: 1rem; color: var(--text2); margin-bottom: 28px; font-weight: 300; }
     .hero-links { display: flex; flex-wrap: wrap; gap: 10px; }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 8px 16px;
-      border-radius: var(--radius);
-      font-family: var(--mono);
-      font-size: .75rem;
-      cursor: pointer;
-      transition: all .2s;
-      border: 1px solid transparent;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 16px; border-radius: 6px;
+      font-family: 'DM Mono', monospace; font-size: .74rem;
+      cursor: pointer; transition: all .2s; border: 1px solid transparent;
     }
-
-    .btn-primary {
-      background: var(--accent);
-      color: var(--bg);
-      font-weight: 500;
-    }
-
+    .btn-primary { background: var(--accent); color: #fff; font-weight: 500; box-shadow: 0 2px 10px rgba(23,85,200,.2); }
     .btn-primary:hover { opacity: .85; }
+    .btn-ghost { background: transparent; border-color: var(--border2); color: var(--text2); }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); opacity: 1; }
 
-    .btn-ghost {
-      background: transparent;
-      border-color: var(--border2);
-      color: var(--text2);
-    }
-
-    .btn-ghost:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      opacity: 1;
-    }
-
-    /* ── Bio ─────────────────────────────────────────────────── */
-    .bio-text {
-      font-size: .97rem;
-      color: var(--text2);
-      line-height: 1.85;
-      max-width: 680px;
-    }
-
+    /* Bio */
+    .bio-text { font-size: .97rem; color: var(--text2); line-height: 1.85; max-width: 680px; }
     .bio-text strong { color: var(--text); }
     .bio-text em { color: var(--accent2); font-style: italic; }
     .bio-text a { color: var(--accent); }
 
-    /* ── Interests ───────────────────────────────────────────── */
-    .tag-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+    /* Tags */
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { font-family: 'DM Mono', monospace; font-size: .7rem; padding: 4px 10px; border-radius: 3px; background: var(--tag-bg); border: 1px solid var(--border); color: var(--text2); letter-spacing: .03em; }
+    .tag.accent { border-color: rgba(200,169,110,.3); color: var(--accent); background: rgba(200,169,110,.06); }
+    .tag.teal   { border-color: rgba(127,181,168,.3); color: var(--accent2); background: rgba(127,181,168,.06); }
+    .tag.mauve  { border-color: rgba(168,123,158,.3); color: var(--accent3); background: rgba(168,123,158,.06); }
 
-    .tag {
-      font-family: var(--mono);
-      font-size: .71rem;
-      padding: 4px 10px;
-      border-radius: 3px;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      color: var(--text2);
-      letter-spacing: .03em;
-    }
+    /* Light theme tag overrides */
+    [data-theme="light"] .tag.accent { border-color: rgba(23,85,200,.22); color: var(--accent); background: rgba(23,85,200,.05); }
+    [data-theme="light"] .tag.teal   { border-color: rgba(12,158,136,.22); color: var(--accent2); background: rgba(12,158,136,.05); }
+    [data-theme="light"] .tag.mauve  { border-color: rgba(112,64,176,.22); color: var(--accent3); background: rgba(112,64,176,.05); }
 
-    .tag.accent  { border-color: rgba(200,169,110,.3); color: var(--accent); background: rgba(200,169,110,.06); }
-    .tag.teal    { border-color: rgba(127,181,168,.3); color: var(--accent2); background: rgba(127,181,168,.06); }
-    .tag.mauve   { border-color: rgba(168,123,158,.3); color: var(--accent3); background: rgba(168,123,158,.06); }
-
-    /* ── News ────────────────────────────────────────────────── */
-    .news-list { display: flex; flex-direction: column; gap: 0; }
-
-    .news-item {
-      display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 16px;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
-      align-items: baseline;
-    }
-
+    /* News */
+    .news-list { display: flex; flex-direction: column; }
+    .news-item { display: grid; grid-template-columns: 80px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); align-items: baseline; }
     .news-item:first-child { border-top: 1px solid var(--border); }
-
-    .news-date {
-      font-family: var(--mono);
-      font-size: .7rem;
-      color: var(--text3);
-      padding-top: 2px;
-    }
-
-    .news-text {
-      font-size: .88rem;
-      color: var(--text2);
-      line-height: 1.6;
-    }
-
+    .news-date { font-family: 'DM Mono', monospace; font-size: .7rem; color: var(--text3); padding-top: 2px; }
+    .news-text { font-size: .88rem; color: var(--text2); line-height: 1.6; }
     .news-text strong { color: var(--text); }
     .news-text em { color: var(--accent2); }
 
-    /* ── Publications ────────────────────────────────────────── */
-    .pub-filters {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-
-    .filter-btn {
-      font-family: var(--mono);
-      font-size: .7rem;
-      padding: 4px 12px;
-      border-radius: 3px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--text2);
-      cursor: pointer;
-      transition: all .2s;
-      letter-spacing: .04em;
-    }
-
-    .filter-btn:hover, .filter-btn.active {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
+    /* Publications */
+    .pub-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+    .filter-btn { font-family: 'DM Mono', monospace; font-size: .7rem; padding: 4px 12px; border-radius: 3px; border: 1px solid var(--border); background: transparent; color: var(--text2); cursor: pointer; transition: all .2s; letter-spacing: .04em; }
+    .filter-btn:hover, .filter-btn.active { border-color: var(--accent); color: var(--accent); }
     .pub-list { display: flex; flex-direction: column; gap: 20px; }
 
-    .pub-card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px 24px;
-      transition: border-color .2s;
-      position: relative;
-    }
+    .pub-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; padding: 22px 24px; transition: border-color .2s, box-shadow .2s; position: relative; }
+    .pub-card:hover { border-color: var(--border2); box-shadow: var(--shadow-card); }
+    .pub-card.highlight { border-color: rgba(200,169,110,.25); background: var(--hl); }
+    .pub-card.highlight::before { content: '★ Featured'; position: absolute; top: -1px; right: 14px; font-family: 'DM Mono', monospace; font-size: .62rem; color: var(--accent); background: var(--card-bg); padding: 0 8px; border: 1px solid rgba(200,169,110,.3); border-top: none; border-radius: 0 0 4px 4px; letter-spacing: .06em; }
 
-    .pub-card:hover { border-color: var(--border2); }
+    [data-theme="light"] .pub-card.highlight { border-color: rgba(23,85,200,.25); }
+    [data-theme="light"] .pub-card.highlight::before { background: #fff; border-color: rgba(23,85,200,.2); }
 
-    .pub-card.highlight {
-      border-color: rgba(200,169,110,.25);
-      background: var(--highlight);
-    }
-
-    .pub-card.highlight::before {
-      content: '★ Featured';
-      position: absolute;
-      top: -1px; right: 14px;
-      font-family: var(--mono);
-      font-size: .62rem;
-      color: var(--accent);
-      background: var(--bg2);
-      padding: 0 8px;
-      border: 1px solid rgba(200,169,110,.3);
-      border-top: none;
-      border-radius: 0 0 4px 4px;
-      letter-spacing: .06em;
-    }
-
-    .pub-badge {
-      display: inline-block;
-      font-family: var(--mono);
-      font-size: .63rem;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      padding: 2px 8px;
-      border-radius: 2px;
-      margin-bottom: 10px;
-    }
-
+    .pub-badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: .06em; text-transform: uppercase; padding: 2px 8px; border-radius: 2px; margin-bottom: 10px; }
     .badge-conference { background: rgba(127,181,168,.12); color: var(--accent2); border: 1px solid rgba(127,181,168,.25); }
-    .badge-journal    { background: rgba(200,169,110,.12); color: var(--accent); border: 1px solid rgba(200,169,110,.25); }
+    .badge-journal    { background: rgba(200,169,110,.12); color: var(--accent);  border: 1px solid rgba(200,169,110,.25); }
     .badge-workshop   { background: rgba(168,123,158,.12); color: var(--accent3); border: 1px solid rgba(168,123,158,.25); }
-    .badge-preprint   { background: rgba(255,255,255,.05); color: var(--text3); border: 1px solid var(--border); }
+    .badge-preprint   { background: var(--tag-bg); color: var(--text3); border: 1px solid var(--border); }
 
-    .pub-title {
-      font-family: var(--display);
-      font-size: 1.12rem;
-      font-weight: 600;
-      color: var(--text);
-      line-height: 1.4;
-      margin-bottom: 6px;
-    }
+    [data-theme="light"] .badge-conference { background: rgba(12,158,136,.08); color: var(--accent2); border-color: rgba(12,158,136,.22); }
+    [data-theme="light"] .badge-journal    { background: rgba(23,85,200,.08);  color: var(--accent);  border-color: rgba(23,85,200,.22); }
+    [data-theme="light"] .badge-workshop   { background: rgba(112,64,176,.08); color: var(--accent3); border-color: rgba(112,64,176,.22); }
 
-    .pub-authors {
-      font-size: .82rem;
-      color: var(--text2);
-      margin-bottom: 4px;
-    }
-
-    .pub-authors .me { color: var(--text); font-weight: 400; text-decoration: underline; text-decoration-color: rgba(255,255,255,.2); }
-
-    .pub-venue {
-      font-size: .8rem;
-      color: var(--text3);
-      font-style: italic;
-      margin-bottom: 12px;
-    }
-
-    .pub-venue .year { font-style: normal; font-family: var(--mono); font-size: .75rem; color: var(--accent); margin-left: 4px; }
-
-    .pub-abstract {
-      font-size: .82rem;
-      color: var(--text3);
-      line-height: 1.7;
-      margin-bottom: 14px;
-      display: none;
-    }
-
+    .pub-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.12rem; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 6px; }
+    .pub-authors { font-size: .82rem; color: var(--text2); margin-bottom: 4px; }
+    .pub-authors .me { color: var(--text); font-weight: 400; text-decoration: underline; text-decoration-color: var(--border2); }
+    .pub-venue { font-size: .8rem; color: var(--text3); font-style: italic; margin-bottom: 12px; }
+    .pub-venue .year { font-style: normal; font-family: 'DM Mono', monospace; font-size: .74rem; color: var(--accent); margin-left: 5px; }
+    .pub-abstract { font-size: .82rem; color: var(--text3); line-height: 1.7; margin-bottom: 14px; display: none; }
     .pub-abstract.visible { display: block; }
-
-    .pub-footer {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .pub-link {
-      font-family: var(--mono);
-      font-size: .68rem;
-      color: var(--text2);
-      border: 1px solid var(--border);
-      border-radius: 3px;
-      padding: 3px 9px;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      transition: all .2s;
-    }
-
+    .pub-footer { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .pub-link { font-family: 'DM Mono', monospace; font-size: .68rem; color: var(--text2); border: 1px solid var(--border); border-radius: 3px; padding: 3px 9px; display: inline-flex; align-items: center; gap: 4px; transition: all .2s; }
     .pub-link:hover { color: var(--accent); border-color: var(--accent); opacity: 1; }
     .pub-link.pdf-link { color: var(--accent); border-color: rgba(200,169,110,.3); }
-
+    [data-theme="light"] .pub-link.pdf-link { border-color: rgba(23,85,200,.28); }
     .pub-tags { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; }
-
-    .abstract-toggle {
-      background: none; border: none; cursor: pointer;
-      font-family: var(--mono); font-size: .68rem;
-      color: var(--text3); transition: color .2s;
-      padding: 3px 9px;
-      border: 1px solid var(--border);
-      border-radius: 3px;
-    }
-
+    .abstract-toggle { background: none; border: 1px solid var(--border); border-radius: 3px; cursor: pointer; font-family: 'DM Mono', monospace; font-size: .68rem; color: var(--text3); transition: color .2s; padding: 3px 9px; }
     .abstract-toggle:hover { color: var(--text2); }
 
-    /* ── Projects ────────────────────────────────────────────── */
-    .project-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .project-card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px;
-      transition: all .2s;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .project-card:hover {
-      border-color: var(--border2);
-      transform: translateY(-2px);
-    }
-
-    .project-status {
-      font-family: var(--mono);
-      font-size: .62rem;
-      letter-spacing: .08em;
-      margin-bottom: 10px;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .project-status::before {
-      content: '';
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: var(--accent2);
-    }
-
+    /* Projects */
+    .project-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .project-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; padding: 22px; transition: all .2s; display: flex; flex-direction: column; }
+    .project-card:hover { border-color: var(--border2); transform: translateY(-2px); box-shadow: var(--shadow-card); }
+    .project-status { font-family: 'DM Mono', monospace; font-size: .62rem; letter-spacing: .08em; margin-bottom: 10px; display: inline-flex; align-items: center; gap: 5px; }
+    .project-status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent2); }
     .project-status.research::before { background: var(--accent3); }
+    .project-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1.15rem; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .project-subtitle { font-size: .78rem; color: var(--accent); font-style: italic; margin-bottom: 10px; }
+    .project-metric { font-family: 'DM Mono', monospace; font-size: .68rem; color: var(--accent2); margin-bottom: 10px; padding: 3px 8px; background: rgba(127,181,168,.08); border: 1px solid rgba(127,181,168,.18); border-radius: 3px; display: inline-block; }
+    [data-theme="light"] .project-metric { background: rgba(12,158,136,.06); border-color: rgba(12,158,136,.18); }
+    .project-desc { font-size: .83rem; color: var(--text2); line-height: 1.7; flex: 1; margin-bottom: 16px; }
+    .project-desc strong { color: var(--text); }
+    .project-footer { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 
-    .project-title {
-      font-family: var(--display);
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
-
-    .project-subtitle {
-      font-size: .78rem;
-      color: var(--accent);
-      font-style: italic;
-      margin-bottom: 10px;
-    }
-
-    .project-desc {
-      font-size: .83rem;
-      color: var(--text2);
-      line-height: 1.7;
-      flex: 1;
-      margin-bottom: 16px;
-    }
-
-    .project-footer {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    /* ── Teaching ────────────────────────────────────────────── */
-    .teaching-list { display: flex; flex-direction: column; gap: 0; }
-
-    .teaching-item {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 12px;
-      padding: 16px 0;
-      border-bottom: 1px solid var(--border);
-      align-items: start;
-    }
-
+    /* Teaching */
+    .teaching-list { display: flex; flex-direction: column; }
+    .teaching-item { display: grid; grid-template-columns: 1fr auto; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--border); align-items: start; }
     .teaching-item:first-child { border-top: 1px solid var(--border); }
+    .teaching-course { font-size: .92rem; color: var(--text); font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600; margin-bottom: 3px; }
+    .teaching-meta { font-size: .78rem; color: var(--text2); }
+    .teaching-level { font-size: .74rem; color: var(--text3); font-family: 'DM Mono', monospace; margin-top: 2px; }
+    .teaching-hours { font-family: 'DM Mono', monospace; font-size: .72rem; color: var(--accent); white-space: nowrap; padding-top: 3px; }
 
-    .teaching-course {
-      font-size: .92rem;
-      color: var(--text);
-      font-family: var(--display);
-      font-weight: 600;
-      margin-bottom: 3px;
-    }
-
-    .teaching-meta {
-      font-size: .78rem;
-      color: var(--text2);
-    }
-
-    .teaching-role {
-      font-size: .75rem;
-      color: var(--text3);
-      font-family: var(--mono);
-    }
-
-    .teaching-hours {
-      font-family: var(--mono);
-      font-size: .72rem;
-      color: var(--accent);
-      white-space: nowrap;
-      padding-top: 3px;
-    }
-
-    /* ── Contact ─────────────────────────────────────────────── */
-    .contact-box {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px 36px;
-      display: flex;
-      gap: 32px;
-      align-items: flex-start;
-    }
-
-    .contact-intro {
-      flex: 1;
-      font-size: .92rem;
-      color: var(--text2);
-      line-height: 1.8;
-    }
-
+    /* Contact */
+    .contact-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 32px 36px; display: flex; gap: 32px; align-items: flex-start; }
+    .contact-intro { flex: 1; font-size: .92rem; color: var(--text2); line-height: 1.8; }
     .contact-intro strong { color: var(--text); }
-
-    .contact-info {
-      flex-shrink: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .contact-info a {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--mono);
-      font-size: .75rem;
-      color: var(--text2);
-      transition: color .2s;
-    }
-
+    .contact-info { flex-shrink: 0; display: flex; flex-direction: column; gap: 10px; }
+    .contact-info a { display: flex; align-items: center; gap: 8px; font-family: 'DM Mono', monospace; font-size: .74rem; color: var(--text2); transition: color .2s; }
     .contact-info a:hover { color: var(--accent); opacity: 1; }
 
-    /* ── Mobile ──────────────────────────────────────────────── */
-    .mobile-header {
-      display: none;
-      position: sticky;
-      top: 0;
-      background: var(--bg2);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 20px;
-      align-items: center;
-      justify-content: space-between;
-      z-index: 200;
-    }
+    /* Ornament */
+    .ornament { text-align: center; color: var(--text3); font-size: .9rem; letter-spacing: .4em; margin: 48px 0; user-select: none; }
 
-    .mobile-name { font-family: var(--display); font-size: 1rem; color: var(--text); }
-
-    .hamburger {
-      background: none; border: none; cursor: pointer;
-      display: flex; flex-direction: column; gap: 4px;
-    }
-
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text2); border-radius: 2px; }
-
-    .sidebar-overlay {
-      display: none;
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,.6);
-      z-index: 99;
-    }
+    /* Mobile */
+    .mobile-header { display: none; position: sticky; top: 0; background: var(--sb-bg); border-bottom: 1px solid rgba(255,255,255,.08); padding: 14px 20px; align-items: center; justify-content: space-between; z-index: 200; }
+    .mobile-name { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1rem; color: #fff; }
+    .hamburger { background: none; border: none; cursor: pointer; display: flex; flex-direction: column; gap: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--sb-text2); border-radius: 2px; }
+    .sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 99; }
 
     @media (max-width: 900px) {
-      .sidebar {
-        transform: translateX(-100%);
-        transition: transform .25s;
-      }
-
+      .sidebar { transform: translateX(-100%); transition: transform .25s; }
       .sidebar.open { transform: none; }
       .sidebar-overlay.open { display: block; }
       .mobile-header { display: flex; }
@@ -849,30 +470,25 @@ Previously, I received my Master's degree in Artificial Intelligence & Data Scie
       .project-grid { grid-template-columns: 1fr; }
       .contact-box { flex-direction: column; }
       .hero-name { font-size: 2.4rem; }
+      .theme-toggle { bottom: 16px; right: 16px; }
     }
 
-    /* ── Decorative rule ─────────────────────────────────────── */
-    .ornament {
-      text-align: center;
-      color: var(--text3);
-      font-size: .9rem;
-      letter-spacing: .4em;
-      margin: 48px 0;
-      user-select: none;
-    }
-
-    /* ── Scrollbar ───────────────────────────────────────────── */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
   </style>
 </head>
-
 <body>
+
+<!-- ── Theme toggle button ── -->
+<button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" title="Switch theme">
+  <span class="icon-moon">🌙</span>
+  <span class="icon-sun">☀️</span>
+</button>
 
 <!-- Mobile header -->
 <header class="mobile-header">
-  <span class="mobile-name" id="mobile-name">Researcher</span>
+  <span class="mobile-name" id="mobile-name">SD</span>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
@@ -881,242 +497,194 @@ Previously, I received my Master's degree in Artificial Intelligence & Data Scie
 <div class="sidebar-overlay" id="overlay"></div>
 
 <div class="layout">
-  <!-- Sidebar -->
+
+  <!-- ━━━━━━━ SIDEBAR ━━━━━━━ -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-inner">
-
-      <!-- Avatar -->
       <div class="avatar" id="avatar"></div>
-
-      <!-- Name + title -->
-      <div class="sidebar-name" id="sidebar-name"></div>
+      <div class="sidebar-name"  id="sidebar-name"></div>
       <div class="sidebar-title" id="sidebar-title"></div>
       <div class="sidebar-affil" id="sidebar-affil"></div>
-
-      <!-- Social links -->
-      <div class="social-links" id="social-links"></div>
-
-      <!-- Nav -->
+      <div class="social-links"  id="social-links"></div>
       <div class="nav-label">Navigation</div>
       <ul class="sidebar-nav">
-        <li><a href="#about"        class="nav-link" data-section="about"><span class="nav-icon">◈</span> About</a></li>
-        <li><a href="#interests"    class="nav-link" data-section="interests"><span class="nav-icon">◈</span> Research Interests</a></li>
-        <li><a href="#news"         class="nav-link" data-section="news"><span class="nav-icon">◈</span> News</a></li>
-        <li><a href="#publications" class="nav-link" data-section="publications"><span class="nav-icon">◈</span> Publications</a></li>
-        <li><a href="#projects"     class="nav-link" data-section="projects"><span class="nav-icon">◈</span> Projects</a></li>
-        <li><a href="#teaching"     class="nav-link" data-section="teaching"><span class="nav-icon">◈</span> Teaching</a></li>
-        <li><a href="#contact"      class="nav-link" data-section="contact"><span class="nav-icon">◈</span> Contact</a></li>
+        <li><a href="#about"        class="nav-link" data-section="about">◈ &nbsp;About</a></li>
+        <li><a href="#interests"    class="nav-link" data-section="interests">◈ &nbsp;Research Interests</a></li>
+        <li><a href="#news"         class="nav-link" data-section="news">◈ &nbsp;News</a></li>
+        <li><a href="#publications" class="nav-link" data-section="publications">◈ &nbsp;Publications</a></li>
+        <li><a href="#projects"     class="nav-link" data-section="projects">◈ &nbsp;Projects</a></li>
+        <li><a href="#teaching"     class="nav-link" data-section="teaching">◈ &nbsp;Teaching</a></li>
+        <li><a href="#contact"      class="nav-link" data-section="contact">◈ &nbsp;Contact</a></li>
       </ul>
-
       <div class="sidebar-footer">
         <div id="sidebar-email"></div>
-        <div style="margin-top:4px;">Last updated · March 2025</div>
+        <div style="margin-top:4px;opacity:.7">Last updated · 2025</div>
       </div>
     </div>
   </aside>
 
-  <!-- Main content -->
-  <main class="main" id="main">
+  <!-- ━━━━━━━ MAIN ━━━━━━━ -->
+  <main class="main">
 
-    <!-- Hero -->
     <div class="hero section" id="hero">
-      <div class="hero-eyebrow">Researcher · Machine Learning & AI</div>
+      <div class="hero-eyebrow">Researcher · Machine Learning & Explainable AI</div>
       <h1 class="hero-name" id="hero-name"></h1>
-      <p class="hero-sub" id="hero-sub"></p>
+      <p  class="hero-sub"  id="hero-sub"></p>
       <div class="hero-links" id="hero-links"></div>
     </div>
 
-    <!-- About -->
     <section class="section" id="about">
-      <div class="section-header">
-        <h2 class="section-title">About</h2>
-        <div class="section-line"></div>
-      </div>
+      <div class="section-header"><h2 class="section-title">About</h2><div class="section-line"></div></div>
       <p class="bio-text" id="bio-text"></p>
     </section>
 
-    <!-- Research Interests -->
     <section class="section" id="interests">
-      <div class="section-header">
-        <h2 class="section-title">Research Interests</h2>
-        <div class="section-line"></div>
-      </div>
+      <div class="section-header"><h2 class="section-title">Research Interests</h2><div class="section-line"></div></div>
       <div class="tag-list" id="interests-list"></div>
     </section>
 
-    <!-- News -->
     <section class="section" id="news">
-      <div class="section-header">
-        <h2 class="section-title">News</h2>
-        <div class="section-line"></div>
-      </div>
+      <div class="section-header"><h2 class="section-title">News</h2><div class="section-line"></div></div>
       <div class="news-list" id="news-list"></div>
     </section>
 
-    <!-- Publications -->
     <section class="section" id="publications">
-      <div class="section-header">
-        <h2 class="section-title">Publications</h2>
-        <div class="section-line"></div>
-      </div>
+      <div class="section-header"><h2 class="section-title">Publications</h2><div class="section-line"></div></div>
       <div class="pub-filters" id="pub-filters"></div>
-      <div class="pub-list" id="pub-list"></div>
+      <div class="pub-list"    id="pub-list"></div>
     </section>
 
-    <!-- Projects -->
     <section class="section" id="projects">
-      <div class="section-header">
-        <h2 class="section-title">Projects &amp; Software</h2>
-        <div class="section-line"></div>
-      </div>
+      <div class="section-header"><h2 class="section-title">Projects &amp; Software</h2><div class="section-line"></div></div>
       <div class="project-grid" id="project-grid"></div>
     </section>
 
-    <!-- Teaching -->
     <section class="section" id="teaching">
-      <div class="section-header">
-        <h2 class="section-title">Teaching</h2>
-        <div class="section-line"></div>
-      </div>
+      <div class="section-header"><h2 class="section-title">Teaching</h2><div class="section-line"></div></div>
       <div class="teaching-list" id="teaching-list"></div>
     </section>
 
-    <!-- Contact -->
     <section class="section" id="contact">
-      <div class="section-header">
-        <h2 class="section-title">Contact</h2>
-        <div class="section-line"></div>
-      </div>
+      <div class="section-header"><h2 class="section-title">Contact</h2><div class="section-line"></div></div>
       <div class="contact-box">
         <div class="contact-intro">
           <strong>Open to collaborations, internship proposals, and research discussions.</strong><br/>
-          I am always happy to connect with researchers and practitioners working on topics related to explainability, fairness, and trustworthy AI. Feel free to reach out — I typically respond within a few days.
+          I am always happy to connect with researchers and practitioners working on explainability, remote sensing, and trustworthy AI. Feel free to reach out — I typically respond within a few days.
         </div>
         <div class="contact-info" id="contact-info"></div>
       </div>
     </section>
 
     <div class="ornament">· · ·</div>
-
   </main>
 </div>
 
-
+<!-- ════════════════════════════════════════════════
+     RENDERING ENGINE
+════════════════════════════════════════════════ -->
 <script>
 (function () {
   const D = DATA;
-  const name = D.name;
-
-  /* ── helpers ─────────────────────────── */
   const $ = id => document.getElementById(id);
-  const icon = (svg) => `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${svg}</svg>`;
 
+  const icon = s => `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${s}</svg>`;
   const ICONS = {
     scholar:  icon('<path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14v7"/><path d="M6.9 9.5A5 5 0 0 0 12 19a5 5 0 0 0 5.1-9.5"/>'),
     github:   icon('<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>'),
-    linkedin: icon('<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>'),
+    linkedin: icon('<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>'),
     twitter:  icon('<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>'),
     email:    icon('<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>'),
     pdf:      icon('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>'),
     code:     icon('<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>'),
-    slides:   icon('<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>'),
-    poster:   icon('<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/>'),
+    slides:   icon('<rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>'),
+    poster:   icon('<rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/>'),
+    github_l: icon('<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>'),
+    demo:     icon('<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>'),
     ext:      icon('<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>'),
     orcid:    icon('<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>'),
     cv:       icon('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>'),
   };
 
-  /* ── sidebar ─────────────────────────── */
+  /* ── theme toggle ── */
+  const html  = document.documentElement;
+  const togBtn = $('theme-toggle');
+  const saved = localStorage.getItem('theme') || 'light';
+  html.setAttribute('data-theme', saved);
+
+  togBtn.addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+
+  /* ── sidebar ── */
+  const name = D.name;
   document.title = `${name} — Research`;
-  $('mobile-name').textContent = name.split(' ')[0];
-  $('sidebar-name').textContent = name;
+  $('mobile-name').textContent  = name.split(' ')[0];
+  $('sidebar-name').textContent  = name;
   $('sidebar-title').textContent = D.title;
   $('sidebar-affil').textContent = D.affiliation;
-  $('sidebar-email').textContent = D.email;
+  $('sidebar-email').innerHTML   = `<a href="mailto:${D.email}" style="color:var(--sb-text3)">${D.email}</a>`;
 
-  // Avatar
   const av = $('avatar');
-  if (D.photo) {
-    const img = document.createElement('img');
-    img.src = D.photo; img.alt = name;
-    av.appendChild(img);
-  } else {
-    av.textContent = D.initials;
-  }
+  if (D.photo) { const img = document.createElement('img'); img.src = D.photo; img.alt = name; av.appendChild(img); }
+  else av.textContent = D.initials;
 
-  // Social links
   const socialMap = [
-    { key: 'scholar',  label: 'Scholar' },
-    { key: 'github',   label: 'GitHub' },
-    { key: 'linkedin', label: 'LinkedIn' },
-    { key: 'twitter',  label: 'Twitter' },
-    { key: 'orcid',    label: 'ORCID' },
-    { key: 'cv',       label: 'CV / PDF' },
+    { key:'scholar',  label:'Scholar'  },
+    { key:'github',   label:'GitHub'   },
+    { key:'linkedin', label:'LinkedIn' },
+    { key:'twitter',  label:'Twitter'  },
+    { key:'orcid',    label:'ORCID'    },
+    { key:'cv',       label:'CV / PDF' },
   ];
   const sl = $('social-links');
   socialMap.forEach(({ key, label }) => {
-    const href = D.links[key];
-    if (!href) return;
+    if (!D.links[key]) return;
     const a = document.createElement('a');
-    a.href = href; a.target = '_blank'; a.rel = 'noopener';
+    a.href = D.links[key]; a.target = '_blank'; a.rel = 'noopener';
     a.innerHTML = `${ICONS[key] || ''} ${label}`;
     sl.appendChild(a);
   });
 
-  /* ── hero ────────────────────────────── */
+  /* ── hero ── */
   $('hero-name').innerHTML = name.replace(/(\S+)\s*$/, '<em>$1</em>');
   $('hero-sub').textContent = D.title + ' · ' + D.affiliation;
 
   const hl = $('hero-links');
-  if (D.links.cv) {
-    const a = document.createElement('a');
-    a.href = D.links.cv; a.className = 'btn btn-primary';
-    a.innerHTML = `${ICONS.cv} Download CV`;
-    hl.appendChild(a);
-  }
-  if (D.links.scholar) {
-    const a = document.createElement('a');
-    a.href = D.links.scholar; a.target = '_blank'; a.className = 'btn btn-ghost';
-    a.innerHTML = `${ICONS.scholar} Google Scholar`;
-    hl.appendChild(a);
-  }
-  if (D.links.github) {
-    const a = document.createElement('a');
-    a.href = D.links.github; a.target = '_blank'; a.className = 'btn btn-ghost';
-    a.innerHTML = `${ICONS.github} GitHub`;
-    hl.appendChild(a);
-  }
-  const emailBtn = document.createElement('a');
-  emailBtn.href = `mailto:${D.email}`; emailBtn.className = 'btn btn-ghost';
-  emailBtn.innerHTML = `${ICONS.email} ${D.email}`;
-  hl.appendChild(emailBtn);
+  const addBtn = (href, html_, cls, ext) => {
+    const a = document.createElement('a'); a.href = href; a.className = `btn ${cls}`;
+    if (ext) { a.target = '_blank'; a.rel = 'noopener'; }
+    a.innerHTML = html_; hl.appendChild(a);
+  };
+  if (D.links.cv)       addBtn(D.links.cv, `${ICONS.cv} Download CV`, 'btn-primary', false);
+  if (D.links.scholar)  addBtn(D.links.scholar, `${ICONS.scholar} Google Scholar`, 'btn-ghost', true);
+  if (D.links.github)   addBtn(D.links.github,  `${ICONS.github} GitHub`, 'btn-ghost', true);
+  addBtn(`mailto:${D.email}`, `${ICONS.email} ${D.email}`, 'btn-ghost', false);
 
-  /* ── bio ─────────────────────────────── */
+  /* ── bio ── */
   $('bio-text').innerHTML = D.bio;
 
-  /* ── interests ───────────────────────── */
-  const tagColors = ['accent','teal','mauve','','teal','accent','mauve'];
+  /* ── interests ── */
+  const tagColors = ['accent','teal','mauve','','teal','accent','mauve',''];
   const il = $('interests-list');
   D.interests.forEach((t, i) => {
-    const span = document.createElement('span');
-    span.className = `tag ${tagColors[i % tagColors.length]}`;
-    span.textContent = t;
-    il.appendChild(span);
+    const s = document.createElement('span');
+    s.className = `tag ${tagColors[i % tagColors.length]}`;
+    s.textContent = t; il.appendChild(s);
   });
 
-  /* ── news ────────────────────────────── */
+  /* ── news ── */
   const nl = $('news-list');
   D.news.forEach(n => {
-    const div = document.createElement('div');
-    div.className = 'news-item';
-    div.innerHTML = `<span class="news-date">${n.date}</span><span class="news-text">${n.text}</span>`;
-    nl.appendChild(div);
+    const d = document.createElement('div'); d.className = 'news-item';
+    d.innerHTML = `<span class="news-date">${n.date}</span><span class="news-text">${n.text}</span>`;
+    nl.appendChild(d);
   });
 
-  /* ── publications ────────────────────── */
+  /* ── publications ── */
   const types = ['all', ...new Set(D.publications.map(p => p.type))];
   let currentFilter = 'all';
-
   const pf = $('pub-filters');
   types.forEach(t => {
     const btn = document.createElement('button');
@@ -1132,30 +700,16 @@ Previously, I received my Master's degree in Artificial Intelligence & Data Scie
   });
 
   function renderPubs() {
-    const pl = $('pub-list');
-    pl.innerHTML = '';
-    const filtered = currentFilter === 'all'
-      ? D.publications
-      : D.publications.filter(p => p.type === currentFilter);
-
+    const pl = $('pub-list'); pl.innerHTML = '';
+    const filtered = currentFilter === 'all' ? D.publications : D.publications.filter(p => p.type === currentFilter);
     filtered.sort((a, b) => b.year - a.year);
-
     filtered.forEach(p => {
       const card = document.createElement('div');
       card.className = `pub-card${p.highlight ? ' highlight' : ''}`;
-
-      const authorHtml = p.authors.replace(
-        name,
-        `<span class="me">${name}</span>`
-      );
-
-      const linkBtns = Object.entries(p.links)
-        .filter(([, v]) => v)
-        .map(([k, v]) => `<a href="${v}" target="_blank" class="pub-link ${k === 'pdf' ? 'pdf-link' : ''}">${ICONS[k] || ''} ${k.toUpperCase()}</a>`)
-        .join('');
-
+      const authorHtml = p.authors.replace(name, `<span class="me">${name}</span>`);
+      const linkBtns = Object.entries(p.links).filter(([, v]) => v)
+        .map(([k, v]) => `<a href="${v}" target="_blank" class="pub-link ${k === 'pdf' ? 'pdf-link' : ''}">${ICONS[k] || ICONS.ext} ${k.toUpperCase()}</a>`).join('');
       const tagHtml = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
-
       card.innerHTML = `
         <span class="pub-badge badge-${p.type}">${p.type}</span>
         <div class="pub-title">${p.title}</div>
@@ -1164,129 +718,102 @@ Previously, I received my Master's degree in Artificial Intelligence & Data Scie
         <div class="pub-abstract" id="abs-${p.id}">${p.abstract}</div>
         <div class="pub-footer">
           ${linkBtns}
-          <button class="abstract-toggle" onclick="toggleAbs('${p.id}', this)">+ Abstract</button>
+          <button class="abstract-toggle" onclick="toggleAbs('${p.id}',this)">+ Abstract</button>
           <div class="pub-tags">${tagHtml}</div>
-        </div>
-      `;
+        </div>`;
       pl.appendChild(card);
     });
   }
-
-  window.toggleAbs = function(id, btn) {
+  window.toggleAbs = (id, btn) => {
     const el = document.getElementById('abs-' + id);
-    const visible = el.classList.toggle('visible');
-    btn.textContent = visible ? '− Abstract' : '+ Abstract';
+    const v = el.classList.toggle('visible');
+    btn.textContent = v ? '− Abstract' : '+ Abstract';
   };
-
   renderPubs();
 
-  /* ── projects ────────────────────────── */
+  /* ── projects ── */
   const pg = $('project-grid');
   D.projects.forEach(p => {
-    const card = document.createElement('div');
-    card.className = 'project-card';
-
+    const card = document.createElement('div'); card.className = 'project-card';
     const statusClass = p.status.toLowerCase();
-    const projectLinks = Object.entries(p.links)
-      .filter(([, v]) => v)
-      .map(([k, v]) => `<a href="${v}" target="_blank" class="pub-link">${ICONS[k] || ICONS.ext} ${k.charAt(0).toUpperCase() + k.slice(1)}</a>`)
-      .join('');
-
+    const projectLinks = Object.entries(p.links).filter(([, v]) => v)
+      .map(([k, v]) => `<a href="${v}" target="_blank" class="pub-link">${ICONS[k] || ICONS.ext} ${k.charAt(0).toUpperCase() + k.slice(1)}</a>`).join('');
     const tagHtml = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
-
     card.innerHTML = `
       <span class="project-status ${statusClass}">${p.status}</span>
       <div class="project-title">${p.title}</div>
       <div class="project-subtitle">${p.subtitle}</div>
+      ${p.metric ? `<div class="project-metric">📊 ${p.metric}</div>` : ''}
       <p class="project-desc">${p.description}</p>
       <div class="project-footer">${projectLinks}</div>
-      <div class="tag-list" style="margin-top:10px;gap:5px;">${tagHtml}</div>
-    `;
+      <div class="tag-list" style="margin-top:10px;gap:5px;">${tagHtml}</div>`;
     pg.appendChild(card);
   });
 
-  /* ── teaching ────────────────────────── */
+  /* ── teaching ── */
   const tl = $('teaching-list');
   D.teaching.forEach(t => {
-    const div = document.createElement('div');
-    div.className = 'teaching-item';
+    const div = document.createElement('div'); div.className = 'teaching-item';
+    const inst = t.institutionUrl
+      ? `<a href="${t.institutionUrl}" target="_blank" rel="noopener">${t.institution}</a>`
+      : t.institution;
     div.innerHTML = `
       <div>
         <div class="teaching-course">${t.course}</div>
-        <div class="teaching-meta">${t.institution} · ${t.year}</div>
-        <div class="teaching-role">${t.role}</div>
+        <div class="teaching-meta">${inst} · ${t.year}</div>
+        ${t.level ? `<div class="teaching-level">${t.level}</div>` : ''}
+        <div class="teaching-level" style="margin-top:2px;color:var(--text3)">${t.role}</div>
       </div>
-      <div class="teaching-hours">${t.hours}</div>
-    `;
+      <div class="teaching-hours">${t.hours}</div>`;
     tl.appendChild(div);
   });
 
-  /* ── contact ─────────────────────────── */
+  /* ── contact ── */
   const ci = $('contact-info');
-  const emailA = document.createElement('a');
-  emailA.href = `mailto:${D.email}`;
-  emailA.innerHTML = `${ICONS.email} ${D.email}`;
-  ci.appendChild(emailA);
+  [
+    { href: `mailto:${D.email}`, html: `${ICONS.email} ${D.email}`, ext: false },
+    D.links.scholar  && { href: D.links.scholar,  html: `${ICONS.scholar}  Google Scholar`, ext: true },
+    D.links.github   && { href: D.links.github,   html: `${ICONS.github}   GitHub`,         ext: true },
+    D.links.linkedin && { href: D.links.linkedin, html: `${ICONS.linkedin} LinkedIn`,       ext: true },
+    D.links.orcid    && { href: D.links.orcid,    html: `${ICONS.orcid}    ORCID`,          ext: true },
+  ].filter(Boolean).forEach(({ href, html: h, ext }) => {
+    const a = document.createElement('a'); a.href = href; a.innerHTML = h;
+    if (ext) { a.target = '_blank'; a.rel = 'noopener'; }
+    ci.appendChild(a);
+  });
 
-  if (D.links.scholar) {
-    const a = document.createElement('a');
-    a.href = D.links.scholar; a.target = '_blank';
-    a.innerHTML = `${ICONS.scholar} Google Scholar`;
-    ci.appendChild(a);
-  }
-  if (D.links.github) {
-    const a = document.createElement('a');
-    a.href = D.links.github; a.target = '_blank';
-    a.innerHTML = `${ICONS.github} GitHub`;
-    ci.appendChild(a);
-  }
-  if (D.links.linkedin) {
-    const a = document.createElement('a');
-    a.href = D.links.linkedin; a.target = '_blank';
-    a.innerHTML = `${ICONS.linkedin} LinkedIn`;
-    ci.appendChild(a);
-  }
-
-  /* ── active nav highlight ─────────────── */
+  /* ── active nav ── */
   const sections = document.querySelectorAll('section[id], .hero');
   const navLinks = document.querySelectorAll('.nav-link');
-
-  const observer = new IntersectionObserver((entries) => {
+  new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         navLinks.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.nav-link[data-section="${e.target.id}"]`);
-        if (active) active.classList.add('active');
+        const a = document.querySelector(`.nav-link[data-section="${e.target.id}"]`);
+        if (a) a.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' }).observe || sections.forEach(() => {});
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const a = document.querySelector(`.nav-link[data-section="${e.target.id}"]`);
+        if (a) a.classList.add('active');
       }
     });
   }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(s => obs.observe(s));
 
-  sections.forEach(s => observer.observe(s));
-
-  /* ── mobile menu ─────────────────────── */
-  const hamburger = $('hamburger');
-  const sidebar = $('sidebar');
-  const overlay = $('overlay');
-
-  hamburger.addEventListener('click', () => {
-    sidebar.classList.toggle('open');
-    overlay.classList.toggle('open');
-  });
-
-  overlay.addEventListener('click', () => {
-    sidebar.classList.remove('open');
-    overlay.classList.remove('open');
-  });
-
-  document.querySelectorAll('.sidebar-nav a').forEach(a => {
-    a.addEventListener('click', () => {
-      sidebar.classList.remove('open');
-      overlay.classList.remove('open');
-    });
-  });
+  /* ── mobile menu ── */
+  const hamburger = $('hamburger'), sidebar = $('sidebar'), overlay = $('overlay');
+  hamburger.addEventListener('click', () => { sidebar.classList.toggle('open'); overlay.classList.toggle('open'); });
+  overlay.addEventListener('click',   () => { sidebar.classList.remove('open'); overlay.classList.remove('open'); });
+  document.querySelectorAll('.sidebar-nav a').forEach(a => a.addEventListener('click', () => {
+    sidebar.classList.remove('open'); overlay.classList.remove('open');
+  }));
 
 })();
 </script>
-
 </body>
 </html>
