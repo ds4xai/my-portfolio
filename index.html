@@ -1,234 +1,1292 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sekou Dabo - Portfolio</title>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" type="text/css" href="./CSS/style.css"/>
- 
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
- 
-  <!-- Police -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lora:wght@500&family=Manrope:wght@200&family=Montserrat:wght@100&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>s
-  <script src="https://kit.fontawesome.com/14273d579a.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Researcher Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet" />
+
+  <!-- ============================================================
+                             CONFIGURATION 
+       ============================================================ -->
+  <script>
+    const DATA = {
+      // ─── Personal info ──────────────────────────────────────────
+      name: "Sékou Dabo",
+      title: "PhD Candidate · Machine Learning & Explainable AI",
+      affiliation: "CY Cergy Paris Université — CYU — ETIS Lab",
+      email: "dabo.sekou@cyu.fr",
+      photo: "./IMAGES/id_photo_sekou_dabo.jpg",
+      initials: "DS",
+
+      // ─── Social links ───────────────────────
+      links: {
+        scholar: "https://scholar.google.com/citations?user=0uVPKNEAAAAJ&hl=fr",
+        github: "https://github.com/ds4xai",
+        linkedin: "https://www.linkedin.com/in/sekou-dabo",
+        twitter: "",
+        cv: "./RESSOURCES/CV_SEKOU_DABO.pdf",
+        orcid: "https://orcid.org/0009-0009-6020-368X",
+      },
+
+      // ─── bio ────────────────────────────────
+        bio: `I am a PhD candidate at <strong><a href="https://www.cyu.fr/" target="_blank" rel="noopener">CYU — CY Cergy Paris Université</a></strong>, working at the intersection of <em>machine learning</em>, <em>explainability</em>, and <em>interpretability</em>. My research aims to make AI systems more transparent, reliable, and trustworthy — with applications across agriculture, healthcare, environmental monitoring, and critical decision-making.
+<br/><br/>
+My thesis, titled <em>"Explainability of Deep Learning Models Applied to Satellite Image Time Series for Crop Mapping"</em>, is conducted at <strong><a href="https://www.etis-lab.fr/" target="_blank" rel="noopener">ETIS Lab</a></strong>. I am supervised by <a href="https://scholar.google.com/citations?user=MdUjsa8AAAAJ&hl=en" target="_blank" rel="noopener">Prof. Vassilis Christophides</a> (Full Professor, ENSEA), co-supervised by <a href="https://scholar.google.com/citations?user=7LlyF3IAAAAJ&hl=fr" target="_blank" rel="noopener">Dr. Michele Linardi</a> (Assistant Professor, CYU) and <a href="https://people.utwente.nl/c.paris" target="_blank" rel="noopener">Dr. Claudia Paris</a> (Assistant Professor, University of Twente).
+<br/><br/>
+Previously, I received my Master's degree in Artificial Intelligence & Data Science from <strong>Mundiapolis University</strong>, Casablanca, Morocco.`,
+
+      // ─── Research interests ──────────────────────────────────────
+      interests: [
+        "Machine Learning",
+        "Explainable AI (XAI)",
+        "Remote Sensing and Crop Mapping",
+        "Causal Inference & Estimation",
+        "Feature Attribution",
+        "Deep Learning",
+        "Healthcare AI",
+        "Fairness & Robustness",
+      ],
+
+      // ─── News items ──────────────────────────────────────────────
+        news: [
+      { date: "2026", text: "📄 New paper accepted at the <strong>Workshops of EDBT/ICDT 2026</strong> (Tampere, Finland): <em>Rethinking HyperSpectral Image Classification (HSIC) Benchmark with Explainability (xAI) under a Causal Estimation Perspective</em>." },
+      { date: "2025", text: "🎉 Paper published at <strong>IGARSS 2025</strong> — IEEE International Geoscience and Remote Sensing Symposium: <em>Optimizing Deep Learning for Satellite Hyperspectral Data: an xAI-Driven Approach to Hyperparameter Selection</em>. Pages 7602–7606. <a href='https://doi.org/10.1109/IGARSS55030.2025.11243437' target='_blank' rel='noopener'>DOI →</a>" },
+      { date: "2024", text: "🎓 Completed Master's degree in AI & Data Science at <strong>Mundiapolis University</strong>, Casablanca." },
+      { date: "2023", text: "🏆 Ranked <strong>top 30%</strong> in a competitive Data Science Coding Challenge on Loan Default Prediction." },
+    ],
+
+
+      // ─── Publications ────────────────────────────────────────────
+      // type: "conference" | "journal" | "workshop" | "preprint"
+      publications: [
+       {
+        id: "pub1",
+        type: "conference",
+        title: "Optimizing Deep Learning for Satellite Hyperspectral Data: an xAI-Driven Approach to Hyperparameter Selection",
+        authors: "Michele Linardi, Sékou Dabo, Claudia Paris",
+        venue: "IEEE International Geoscience and Remote Sensing Symposium (IGARSS)",
+        year: 2025,
+        tags: ["Explainable AI", "Hyperspectral Imaging", "Deep Learning", "Transformers", "PRISMA"],
+        links: {
+            github: "https://github.com/ds4xai/xAIDrivenHyperOpt.git", 
+            pdf: "https://doi.org/10.1109/IGARSS55030.2025.11243437",
+            code: "",
+            slides: "",
+            poster: "",
+        },
+        abstract: "We propose an xAI-driven methodology for hyperparameter selection in deep learning models applied to satellite hyperspectral data. By leveraging explainability techniques, we guide the optimization process to improve model adaptation on PRISMA hyperspectral imagery — reducing computational cost while maintaining high performance across atmospheric and spectral modeling tasks.",
+        highlight: true,
+        },
+        {
+        id: "pub2",
+        type: "workshop",
+        title: "Rethinking HyperSpectral Image Classification (HSIC) Benchmark with Explainability (xAI) under a Causal Estimation Perspective",
+        authors: "Sékou Dabo, Michele Linardi, Claudia Paris",
+        venue: "Workshops of the EDBT/ICDT 2026 Joint Conference",
+        year: 2026,
+        tags: ["Explainable AI", "Hyperspectral Imaging", "Causality", "Benchmarking", "HSIC"],
+        links: {
+            github: "https://github.com/ds4xai/ReX-HSIC.git", 
+            pdf: "",   
+            code: "",
+            slides: "",
+            poster: "",
+        },
+        abstract: "soon",
+        highlight: false,
+        },
+      ],
+
+      // ─── Projects ────────────────────────────────────────────────
+      projects: [
+        {
+        title: "Neural Networks with NumPy",
+        subtitle: "Deep Learning · Pedagogy · Mar 2024",
+        description: "A hands-on article and codebase demystifying deep learning by building neural networks from scratch using only NumPy — no framework. Covers classification (MNIST handwritten digits) and regression (Paris Housing prices from Kaggle 2021), demonstrating that the fundamentals of AI are accessible with algebra, statistics, and basic calculus.",
+        tags: ["From Scratch", "Python", "NumPy", "Neural Networks", "MNIST", "Regression"],
+        links: { github: "https://github.com/ds4xai/nn-with-numpy-4-intuitive-comprehension" },
+        status: "Published",
+        Datasets: "MNIST classification · Paris Housing regression",
+      },
+      {
+        title: "Amazon Deforestation Analysis",
+        subtitle: "Computer Vision · Environmental Science · Nov 2023",
+        description: "Quantified deforestation in the Rondônia region of the Amazon forest between 2000 and 2012 using NASA satellite imagery. Applied image processing, mathematical morphology operators (erosion, dilation, closure) and convolution to accurately measure forest cover loss over a decade.",
+        tags: ["Python", "OpenCV", "NumPy", "Computer Vision", "Mathematical Morphology", "NASA"],
+        links: { github: "https://github.com/ds4xai/computer-vision-deforestation-rate" },
+        status: "Published",
+        metric: "21.33% deforestation rate (2000–2012)",
+      },
+      {
+        title: "Loan Default Prediction",
+        subtitle: "Machine Learning · Classification · Sep 2023",
+        description: "Built a classifier to predict individual loan eligibility on a highly imbalanced dataset. Applied 35% oversampling to rebalance classes and combined models via a voting ensemble — reaching <strong>87% accuracy</strong> and ranking in the <strong>top 30%</strong> of participants in a competitive coding challenge.",
+        tags: ["Python", "scikit-learn", "NumPy", "Pandas", "Resampling", "Ensemble Learning"],
+        links: { demo: "https://hub.labs.coursera.org/connect/sharedmfwevgxr?forceRefresh=false&path=%2Fnotebooks%2FLoanDefaultPrediction.ipynb&isLabVersioning=file-prep" },
+        status: "Published",
+        metric: "87% Accuracy · Top 30%",
+      },
+      ],
+
+      // ─── Teaching ────────────────────────────────────────────────
+    teaching: [
+      { course: "Web Integration — HTML, CSS, JavaScript", role: "Teaching Assistant", institution: "IUT Cergy-Pontoise (CYU)", institutionUrl: "https://cyiut.cyu.fr/", year: "2026", hours: "46h", level: "BUT 1st year · MMI – Web Development" },
+      { course: "Advanced Python & Web Integration",       role: "Teaching Assistant", institution: "IUT Cergy-Pontoise (CYU)", institutionUrl: "https://cyiut.cyu.fr/", year: "2025–2026", hours: "18h", level: "BUT 3rd year · MMI – Web Development" },
+    ],
+    };
+  </script>
+
+  <style>
+    /* ── Reset & tokens ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #0f0f11;
+      --bg2:         #161619;
+      --bg3:         #1e1e23;
+      --border:      rgba(255,255,255,.07);
+      --border2:     rgba(255,255,255,.12);
+      --text:        #e8e4dd;
+      --text2:       #9a9690;
+      --text3:       #615e59;
+      --accent:      #c8a96e;   /* warm gold */
+      --accent2:     #7fb5a8;   /* teal */
+      --accent3:     #a87b9e;   /* mauve */
+      --red:         #c96e6e;
+      --highlight:   rgba(200,169,110,.08);
+      --sans:        'Source Serif 4', Georgia, serif;
+      --mono:        'DM Mono', monospace;
+      --display:     'Cormorant Garamond', Georgia, serif;
+      --sidebar-w:   280px;
+      --radius:      6px;
+      --shadow:      0 4px 32px rgba(0,0,0,.5);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: opacity .2s; }
+    a:hover { opacity: .75; }
+
+    /* ── Layout ─────────────────────────────────────────────── */
+    .layout {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ── Sidebar ─────────────────────────────────────────────── */
+    .sidebar {
+      width: var(--sidebar-w);
+      flex-shrink: 0;
+      position: fixed;
+      top: 0; left: 0; bottom: 0;
+      overflow-y: auto;
+      background: var(--bg2);
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      z-index: 100;
+    }
+
+    .sidebar-inner {
+      padding: 40px 28px 32px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--bg3);
+      border: 2px solid var(--border2);
+      overflow: hidden;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--display);
+      font-size: 2rem;
+      color: var(--accent);
+      letter-spacing: .05em;
+    }
+
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+    .sidebar-name {
+      font-family: var(--display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .sidebar-title {
+      font-size: .78rem;
+      color: var(--text2);
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+
+    .sidebar-affil {
+      font-size: .75rem;
+      color: var(--text3);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 28px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .72rem;
+      font-family: var(--mono);
+      color: var(--text2);
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 4px 9px;
+      transition: all .2s;
+    }
+
+    .social-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      opacity: 1;
+    }
+
+    /* Sidebar nav */
+    .nav-label {
+      font-family: var(--mono);
+      font-size: .65rem;
+      letter-spacing: .12em;
+      color: var(--text3);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      margin-top: 4px;
+    }
+
+    .sidebar-nav {
+      list-style: none;
+      margin-bottom: 28px;
+    }
+
+    .sidebar-nav li a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 10px;
+      border-radius: var(--radius);
+      font-size: .82rem;
+      color: var(--text2);
+      transition: all .2s;
+      font-family: var(--sans);
+      font-weight: 300;
+    }
+
+    .sidebar-nav li a:hover,
+    .sidebar-nav li a.active {
+      color: var(--text);
+      background: rgba(255,255,255,.04);
+      opacity: 1;
+    }
+
+    .sidebar-nav li a.active {
+      color: var(--accent);
+      border-left: 2px solid var(--accent);
+      padding-left: 8px;
+    }
+
+    .nav-icon { opacity: .5; font-size: .9em; }
+
+    .sidebar-footer {
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: .68rem;
+      color: var(--text3);
+      font-family: var(--mono);
+    }
+
+    /* ── Main content ─────────────────────────────────────────── */
+    .main {
+      margin-left: var(--sidebar-w);
+      flex: 1;
+      max-width: 860px;
+      padding: 60px 64px 100px;
+    }
+
+    /* ── Section ─────────────────────────────────────────────── */
+    .section {
+      margin-bottom: 72px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp .5s forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: none; }
+    }
+
+    .section:nth-child(1) { animation-delay: .05s; }
+    .section:nth-child(2) { animation-delay: .12s; }
+    .section:nth-child(3) { animation-delay: .18s; }
+    .section:nth-child(4) { animation-delay: .24s; }
+    .section:nth-child(5) { animation-delay: .30s; }
+    .section:nth-child(6) { animation-delay: .36s; }
+    .section:nth-child(7) { animation-delay: .42s; }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .section-title {
+      font-family: var(--display);
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: -.01em;
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── Hero ─────────────────────────────────────────────────── */
+    .hero {
+      padding: 0 0 48px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 64px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: .72rem;
+      letter-spacing: .15em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero-name {
+      font-family: var(--display);
+      font-size: 3.4rem;
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .hero-name em { font-style: italic; color: var(--accent); }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--text2);
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+
+    .hero-links { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: var(--radius);
+      font-family: var(--mono);
+      font-size: .75rem;
+      cursor: pointer;
+      transition: all .2s;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: 500;
+    }
+
+    .btn-primary:hover { opacity: .85; }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: var(--border2);
+      color: var(--text2);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      opacity: 1;
+    }
+
+    /* ── Bio ─────────────────────────────────────────────────── */
+    .bio-text {
+      font-size: .97rem;
+      color: var(--text2);
+      line-height: 1.85;
+      max-width: 680px;
+    }
+
+    .bio-text strong { color: var(--text); }
+    .bio-text em { color: var(--accent2); font-style: italic; }
+    .bio-text a { color: var(--accent); }
+
+    /* ── Interests ───────────────────────────────────────────── */
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: .71rem;
+      padding: 4px 10px;
+      border-radius: 3px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text2);
+      letter-spacing: .03em;
+    }
+
+    .tag.accent  { border-color: rgba(200,169,110,.3); color: var(--accent); background: rgba(200,169,110,.06); }
+    .tag.teal    { border-color: rgba(127,181,168,.3); color: var(--accent2); background: rgba(127,181,168,.06); }
+    .tag.mauve   { border-color: rgba(168,123,158,.3); color: var(--accent3); background: rgba(168,123,158,.06); }
+
+    /* ── News ────────────────────────────────────────────────── */
+    .news-list { display: flex; flex-direction: column; gap: 0; }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: baseline;
+    }
+
+    .news-item:first-child { border-top: 1px solid var(--border); }
+
+    .news-date {
+      font-family: var(--mono);
+      font-size: .7rem;
+      color: var(--text3);
+      padding-top: 2px;
+    }
+
+    .news-text {
+      font-size: .88rem;
+      color: var(--text2);
+      line-height: 1.6;
+    }
+
+    .news-text strong { color: var(--text); }
+    .news-text em { color: var(--accent2); }
+
+    /* ── Publications ────────────────────────────────────────── */
+    .pub-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .filter-btn {
+      font-family: var(--mono);
+      font-size: .7rem;
+      padding: 4px 12px;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text2);
+      cursor: pointer;
+      transition: all .2s;
+      letter-spacing: .04em;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .pub-list { display: flex; flex-direction: column; gap: 20px; }
+
+    .pub-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      transition: border-color .2s;
+      position: relative;
+    }
+
+    .pub-card:hover { border-color: var(--border2); }
+
+    .pub-card.highlight {
+      border-color: rgba(200,169,110,.25);
+      background: var(--highlight);
+    }
+
+    .pub-card.highlight::before {
+      content: '★ Featured';
+      position: absolute;
+      top: -1px; right: 14px;
+      font-family: var(--mono);
+      font-size: .62rem;
+      color: var(--accent);
+      background: var(--bg2);
+      padding: 0 8px;
+      border: 1px solid rgba(200,169,110,.3);
+      border-top: none;
+      border-radius: 0 0 4px 4px;
+      letter-spacing: .06em;
+    }
+
+    .pub-badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: .63rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 2px;
+      margin-bottom: 10px;
+    }
+
+    .badge-conference { background: rgba(127,181,168,.12); color: var(--accent2); border: 1px solid rgba(127,181,168,.25); }
+    .badge-journal    { background: rgba(200,169,110,.12); color: var(--accent); border: 1px solid rgba(200,169,110,.25); }
+    .badge-workshop   { background: rgba(168,123,158,.12); color: var(--accent3); border: 1px solid rgba(168,123,158,.25); }
+    .badge-preprint   { background: rgba(255,255,255,.05); color: var(--text3); border: 1px solid var(--border); }
+
+    .pub-title {
+      font-family: var(--display);
+      font-size: 1.12rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+
+    .pub-authors {
+      font-size: .82rem;
+      color: var(--text2);
+      margin-bottom: 4px;
+    }
+
+    .pub-authors .me { color: var(--text); font-weight: 400; text-decoration: underline; text-decoration-color: rgba(255,255,255,.2); }
+
+    .pub-venue {
+      font-size: .8rem;
+      color: var(--text3);
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    .pub-venue .year { font-style: normal; font-family: var(--mono); font-size: .75rem; color: var(--accent); margin-left: 4px; }
+
+    .pub-abstract {
+      font-size: .82rem;
+      color: var(--text3);
+      line-height: 1.7;
+      margin-bottom: 14px;
+      display: none;
+    }
+
+    .pub-abstract.visible { display: block; }
+
+    .pub-footer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pub-link {
+      font-family: var(--mono);
+      font-size: .68rem;
+      color: var(--text2);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 3px 9px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all .2s;
+    }
+
+    .pub-link:hover { color: var(--accent); border-color: var(--accent); opacity: 1; }
+    .pub-link.pdf-link { color: var(--accent); border-color: rgba(200,169,110,.3); }
+
+    .pub-tags { margin-left: auto; display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .abstract-toggle {
+      background: none; border: none; cursor: pointer;
+      font-family: var(--mono); font-size: .68rem;
+      color: var(--text3); transition: color .2s;
+      padding: 3px 9px;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+    }
+
+    .abstract-toggle:hover { color: var(--text2); }
+
+    /* ── Projects ────────────────────────────────────────────── */
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .project-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      transition: all .2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      border-color: var(--border2);
+      transform: translateY(-2px);
+    }
+
+    .project-status {
+      font-family: var(--mono);
+      font-size: .62rem;
+      letter-spacing: .08em;
+      margin-bottom: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .project-status::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent2);
+    }
+
+    .project-status.research::before { background: var(--accent3); }
+
+    .project-title {
+      font-family: var(--display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .project-subtitle {
+      font-size: .78rem;
+      color: var(--accent);
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .project-desc {
+      font-size: .83rem;
+      color: var(--text2);
+      line-height: 1.7;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+
+    .project-footer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* ── Teaching ────────────────────────────────────────────── */
+    .teaching-list { display: flex; flex-direction: column; gap: 0; }
+
+    .teaching-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .teaching-item:first-child { border-top: 1px solid var(--border); }
+
+    .teaching-course {
+      font-size: .92rem;
+      color: var(--text);
+      font-family: var(--display);
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .teaching-meta {
+      font-size: .78rem;
+      color: var(--text2);
+    }
+
+    .teaching-role {
+      font-size: .75rem;
+      color: var(--text3);
+      font-family: var(--mono);
+    }
+
+    .teaching-hours {
+      font-family: var(--mono);
+      font-size: .72rem;
+      color: var(--accent);
+      white-space: nowrap;
+      padding-top: 3px;
+    }
+
+    /* ── Contact ─────────────────────────────────────────────── */
+    .contact-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+      display: flex;
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .contact-intro {
+      flex: 1;
+      font-size: .92rem;
+      color: var(--text2);
+      line-height: 1.8;
+    }
+
+    .contact-intro strong { color: var(--text); }
+
+    .contact-info {
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact-info a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: .75rem;
+      color: var(--text2);
+      transition: color .2s;
+    }
+
+    .contact-info a:hover { color: var(--accent); opacity: 1; }
+
+    /* ── Mobile ──────────────────────────────────────────────── */
+    .mobile-header {
+      display: none;
+      position: sticky;
+      top: 0;
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 20px;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 200;
+    }
+
+    .mobile-name { font-family: var(--display); font-size: 1rem; color: var(--text); }
+
+    .hamburger {
+      background: none; border: none; cursor: pointer;
+      display: flex; flex-direction: column; gap: 4px;
+    }
+
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text2); border-radius: 2px; }
+
+    .sidebar-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.6);
+      z-index: 99;
+    }
+
+    @media (max-width: 900px) {
+      .sidebar {
+        transform: translateX(-100%);
+        transition: transform .25s;
+      }
+
+      .sidebar.open { transform: none; }
+      .sidebar-overlay.open { display: block; }
+      .mobile-header { display: flex; }
+      .main { margin-left: 0; padding: 24px 24px 80px; }
+      .project-grid { grid-template-columns: 1fr; }
+      .contact-box { flex-direction: column; }
+      .hero-name { font-size: 2.4rem; }
+    }
+
+    /* ── Decorative rule ─────────────────────────────────────── */
+    .ornament {
+      text-align: center;
+      color: var(--text3);
+      font-size: .9rem;
+      letter-spacing: .4em;
+      margin: 48px 0;
+      user-select: none;
+    }
+
+    /* ── Scrollbar ───────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--bg3); border-radius: 3px; }
+  </style>
 </head>
 
 <body>
 
-<!-- Navigation Bar -->
-<header>
-    <nav class="navbar navbar-expand-md fixed-top navbar-light navbar-custom">
-        <div class="container">
-            <a class="navbar-brand text-uppercase fw-bold" href="./index.html">
-                <span class="bg-primary p-1 rounded-3 text-light">Sekou</span> Dabo
-            </a>
-            <a href="./RESSOURCES/CV_SEKOU_DABO.pdf" target="_blank" rel="noopener noreferrer" class="text-decoration-none mx-2" target="_blank">CV</a>
-            <a href="mailto:sekoudabo884@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="My address mail link" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-envelope"></i>
-            </a>
-            
-            <button class="navbar-toggler mr-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./HTML/skills.html">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./HTML/portfolio.html">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./HTML/blog.html">Blog</a>
-                    </li>
-                    <!--
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>-->
-                </ul>
-            </div>
-        </div>
-    </nav>
+<!-- Mobile header -->
+<header class="mobile-header">
+  <span class="mobile-name" id="mobile-name">Researcher</span>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
-<!-- principal -->
-<main>
-    <div class="container-fluid main-custom" id="main-index">
+<div class="sidebar-overlay" id="overlay"></div>
 
-        <section id="banner" class="py-5">
-            <div class="container">
-                <div class="d-flex flex-column align-items-center">
-                    <img class="rounded-circle img-fluid mx-auto d-block border border-5" width="100px" src="./IMAGES/sheva.jpg" alt="Sekou Dabo - Data Scientist and AI Engineer">
-                    <h1 class="fw-bold text-white pt-3" id="typed-title">SEKOU DABO - DATA AND AI SCIENTIST</h1>
-                    <h5 class="fw-light text-white" id="typed-quote"><blockquote>“To progress, it involves accepting failures, making mistakes, while ensuring not to repeat them more than once.”</blockquote></h5>
-                </div>
-            </div>
-        </section>
+<div class="layout">
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-inner">
 
-        <section id="presentation">
-          <div id="about-me" class="container">
-              <div class="row gy-4 gy-md-0">
-                  <div class="col-12 col-md-5" id="profile-image">
-                      <img src="./IMAGES/my_profile_image.png" alt="my profile image" id="profile-image"  class="img-fluid"/>
-                  </div>
-      
-                  <div class="col-12 col-md-7">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                          <h1>
-                              Hi, I'm Sékou Dabo <img src="./IMAGES/gretting.jpg"
-                                      alt="greeting emoji"
-                                      width="60px"/>
-                          </h1>
-                          <p class="text-wrap">I am currently a final-year Master's student in Artificial Intelligence and Data Science at
-                              Mundiapolis University in Casablanca, Morocco. My academic journey has fueled my passion for
-                              data analysis, with a focus on techniques such as Principal Component Analysis (PCA) and Multiple
-                              Correspondence Analysis (MCA). These methods not only uncover valuable insights within data but
-                              also significantly simplify the complexity of machine learning algorithms, facilitating better
-                              generalization.
-                              <br>I have also delved into the realm of deep learning, working with various neural network
-                              architectures, including convolutional, recurrent, and transformer networks. I have explored
-                              the application of these skills in exciting domains, such as medical diagnosis through image
-                              analysis (convolutional networks) and the creation of innovative molecules (recurrent networks)
-                              for disease treatment. Lastly, I am intrigued by the question of which architecture, whether
-                              deep or wide networks, is more effective in solving a given task. This question may serve as a
-                              guiding theme for my future research.
-                          </p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-      
+      <!-- Avatar -->
+      <div class="avatar" id="avatar"></div>
 
-        <section id="recommendations">                
-            <div class="container my-5" id="recommendations-show">
-                <!-- Recommendations -->
-                <h1 class="my-3">All recommendations</h1>
-                
-                <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
-                    <div class="carousel-inner all-recommendations-container">
-                     <!-- template to add recommendation -->
-                    <template id="recommendation-template">
-                        <div class="carousel-item"> <!--the first item must have the active class at this level-->
-                            <div class="card w-md-100 w-50 mx-auto">
-                            <div class="card-body w-md-100 p-3">
-                                <h6 class="card-title owner">Recommendation owner</h5>
-                                <p class="card-text p-2 w-90 mx-auto my-1">Your recommendation</p>
-                                <div class="date-container">
-                                <time datetime="2023-10-29T12:00:00" class="card-date"></time>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </template>
+      <!-- Name + title -->
+      <div class="sidebar-name" id="sidebar-name"></div>
+      <div class="sidebar-title" id="sidebar-title"></div>
+      <div class="sidebar-affil" id="sidebar-affil"></div>
 
-                    </div>
-                    <button class="carousel-control-prev custom-carousel-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                  
+      <!-- Social links -->
+      <div class="social-links" id="social-links"></div>
 
+      <!-- Nav -->
+      <div class="nav-label">Navigation</div>
+      <ul class="sidebar-nav">
+        <li><a href="#about"        class="nav-link" data-section="about"><span class="nav-icon">◈</span> About</a></li>
+        <li><a href="#interests"    class="nav-link" data-section="interests"><span class="nav-icon">◈</span> Research Interests</a></li>
+        <li><a href="#news"         class="nav-link" data-section="news"><span class="nav-icon">◈</span> News</a></li>
+        <li><a href="#publications" class="nav-link" data-section="publications"><span class="nav-icon">◈</span> Publications</a></li>
+        <li><a href="#projects"     class="nav-link" data-section="projects"><span class="nav-icon">◈</span> Projects</a></li>
+        <li><a href="#teaching"     class="nav-link" data-section="teaching"><span class="nav-icon">◈</span> Teaching</a></li>
+        <li><a href="#contact"      class="nav-link" data-section="contact"><span class="nav-icon">◈</span> Contact</a></li>
+      </ul>
 
-            <div class="container" id="recommendations-form">
-                <!-- Recommendation Form -->
-                <div id="contact">
-                    <div id="form">
-                        <h2 class="introduction text-wrap my-3">Leave a recommendation</h2>
-                        <input id="title-recommendation"  type="text" placeholder="Status & Name (Optional)"><br/><br/>
-                        <textarea id="new-recommendation"  placeholder="Message"></textarea>
-                        <div class="d-flex justify-content-center my-3">
-                            <button type="button" class="btn btn-primary" id="recommend_btn" onclick="addRecommendation()">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+      <div class="sidebar-footer">
+        <div id="sidebar-email"></div>
+        <div style="margin-top:4px;">Last updated · March 2025</div>
+      </div>
     </div>
-</main>
+  </aside>
 
-<footer class="border-top footer-custom">
-    <div class="container py-5">
-        <div class="row">
-            <div class="col">
-                <ul class="list-inline mb-0 d-flex align-items-center justify-content-center">
-                    <li class="list-inline-item mx-3">
-                        <a href="https://www.linkedin.com/in/sekou-dabo" aria-label="My linkedin link" class="text-decoration-none text-social-black" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin fa-3x"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item mx-3">
-                        <a href="https://github.com/NirSheva" aria-label="My github link" class="text-decoration-none text-social-black" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github-square fa-3x"> </i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item mx-3">
-                        <a href="https://www.instagram.com/sheva_skdb/" aria-label="My instagram link" class="text-decoration-none text-social-black" target="_blank" rel="noopener noreferrer"s>
-                            <i class="fab fa-instagram-square fa-3x"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item mx-3">
-                        <a href="https://twitter.com/skdb1204" aria-label="My X link" class="text-decoration-none text-social-black" target="_blank" rel="noopener noreferrer">
-                           <!--<i class="fab fa-twitter-x fa-3x"></i>-->
-                          <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
-                          </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+  <!-- Main content -->
+  <main class="main" id="main">
+
+    <!-- Hero -->
+    <div class="hero section" id="hero">
+      <div class="hero-eyebrow">Researcher · Machine Learning & AI</div>
+      <h1 class="hero-name" id="hero-name"></h1>
+      <p class="hero-sub" id="hero-sub"></p>
+      <div class="hero-links" id="hero-links"></div>
+    </div>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="section-header">
+        <h2 class="section-title">About</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="bio-text" id="bio-text"></p>
+    </section>
+
+    <!-- Research Interests -->
+    <section class="section" id="interests">
+      <div class="section-header">
+        <h2 class="section-title">Research Interests</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="tag-list" id="interests-list"></div>
+    </section>
+
+    <!-- News -->
+    <section class="section" id="news">
+      <div class="section-header">
+        <h2 class="section-title">News</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="news-list" id="news-list"></div>
+    </section>
+
+    <!-- Publications -->
+    <section class="section" id="publications">
+      <div class="section-header">
+        <h2 class="section-title">Publications</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="pub-filters" id="pub-filters"></div>
+      <div class="pub-list" id="pub-list"></div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section-header">
+        <h2 class="section-title">Projects &amp; Software</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="project-grid" id="project-grid"></div>
+    </section>
+
+    <!-- Teaching -->
+    <section class="section" id="teaching">
+      <div class="section-header">
+        <h2 class="section-title">Teaching</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="teaching-list" id="teaching-list"></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="section-header">
+        <h2 class="section-title">Contact</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-box">
+        <div class="contact-intro">
+          <strong>Open to collaborations, internship proposals, and research discussions.</strong><br/>
+          I am always happy to connect with researchers and practitioners working on topics related to explainability, fairness, and trustworthy AI. Feel free to reach out — I typically respond within a few days.
         </div>
-    </div>
-    <div class="align-items-center justify-content-center text-center">
-        <p>&copy; 2023 Sékou Dabo. All rights reserved.</p>
-    </div>
-    
-</footer>
+        <div class="contact-info" id="contact-info"></div>
+      </div>
+    </section>
 
+    <div class="ornament">· · ·</div>
 
-<!-- go at the top-->
-<div id="scrollToTopButton">
-    <a href="#" aria-label="Go up link">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="white" width="60px">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-    </a>
+  </main>
 </div>
 
 
-<!-- popup confirming the addition of the recommendation -->
-<div class="popup" id="popup" class="flex_center">
-    <img src="./IMAGES/checkmark--outline.svg" alt="your recommendation has been added"/>
-    <h3>Thanks for leaving a recommendation!</h3>
-    <button onclick="showPopup(false)">Ok</button>
-  </div>
+<script>
+(function () {
+  const D = DATA;
+  const name = D.name;
 
-<script src="./JS/main.js"></script>
-<!-- Bootstrap JS bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
+  /* ── helpers ─────────────────────────── */
+  const $ = id => document.getElementById(id);
+  const icon = (svg) => `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${svg}</svg>`;
+
+  const ICONS = {
+    scholar:  icon('<path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14v7"/><path d="M6.9 9.5A5 5 0 0 0 12 19a5 5 0 0 0 5.1-9.5"/>'),
+    github:   icon('<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>'),
+    linkedin: icon('<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>'),
+    twitter:  icon('<path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>'),
+    email:    icon('<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>'),
+    pdf:      icon('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>'),
+    code:     icon('<polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>'),
+    slides:   icon('<rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>'),
+    poster:   icon('<rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/>'),
+    ext:      icon('<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>'),
+    orcid:    icon('<circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>'),
+    cv:       icon('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>'),
+  };
+
+  /* ── sidebar ─────────────────────────── */
+  document.title = `${name} — Research`;
+  $('mobile-name').textContent = name.split(' ')[0];
+  $('sidebar-name').textContent = name;
+  $('sidebar-title').textContent = D.title;
+  $('sidebar-affil').textContent = D.affiliation;
+  $('sidebar-email').textContent = D.email;
+
+  // Avatar
+  const av = $('avatar');
+  if (D.photo) {
+    const img = document.createElement('img');
+    img.src = D.photo; img.alt = name;
+    av.appendChild(img);
+  } else {
+    av.textContent = D.initials;
+  }
+
+  // Social links
+  const socialMap = [
+    { key: 'scholar',  label: 'Scholar' },
+    { key: 'github',   label: 'GitHub' },
+    { key: 'linkedin', label: 'LinkedIn' },
+    { key: 'twitter',  label: 'Twitter' },
+    { key: 'orcid',    label: 'ORCID' },
+    { key: 'cv',       label: 'CV / PDF' },
+  ];
+  const sl = $('social-links');
+  socialMap.forEach(({ key, label }) => {
+    const href = D.links[key];
+    if (!href) return;
+    const a = document.createElement('a');
+    a.href = href; a.target = '_blank'; a.rel = 'noopener';
+    a.innerHTML = `${ICONS[key] || ''} ${label}`;
+    sl.appendChild(a);
+  });
+
+  /* ── hero ────────────────────────────── */
+  $('hero-name').innerHTML = name.replace(/(\S+)\s*$/, '<em>$1</em>');
+  $('hero-sub').textContent = D.title + ' · ' + D.affiliation;
+
+  const hl = $('hero-links');
+  if (D.links.cv) {
+    const a = document.createElement('a');
+    a.href = D.links.cv; a.className = 'btn btn-primary';
+    a.innerHTML = `${ICONS.cv} Download CV`;
+    hl.appendChild(a);
+  }
+  if (D.links.scholar) {
+    const a = document.createElement('a');
+    a.href = D.links.scholar; a.target = '_blank'; a.className = 'btn btn-ghost';
+    a.innerHTML = `${ICONS.scholar} Google Scholar`;
+    hl.appendChild(a);
+  }
+  if (D.links.github) {
+    const a = document.createElement('a');
+    a.href = D.links.github; a.target = '_blank'; a.className = 'btn btn-ghost';
+    a.innerHTML = `${ICONS.github} GitHub`;
+    hl.appendChild(a);
+  }
+  const emailBtn = document.createElement('a');
+  emailBtn.href = `mailto:${D.email}`; emailBtn.className = 'btn btn-ghost';
+  emailBtn.innerHTML = `${ICONS.email} ${D.email}`;
+  hl.appendChild(emailBtn);
+
+  /* ── bio ─────────────────────────────── */
+  $('bio-text').innerHTML = D.bio;
+
+  /* ── interests ───────────────────────── */
+  const tagColors = ['accent','teal','mauve','','teal','accent','mauve'];
+  const il = $('interests-list');
+  D.interests.forEach((t, i) => {
+    const span = document.createElement('span');
+    span.className = `tag ${tagColors[i % tagColors.length]}`;
+    span.textContent = t;
+    il.appendChild(span);
+  });
+
+  /* ── news ────────────────────────────── */
+  const nl = $('news-list');
+  D.news.forEach(n => {
+    const div = document.createElement('div');
+    div.className = 'news-item';
+    div.innerHTML = `<span class="news-date">${n.date}</span><span class="news-text">${n.text}</span>`;
+    nl.appendChild(div);
+  });
+
+  /* ── publications ────────────────────── */
+  const types = ['all', ...new Set(D.publications.map(p => p.type))];
+  let currentFilter = 'all';
+
+  const pf = $('pub-filters');
+  types.forEach(t => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn' + (t === 'all' ? ' active' : '');
+    btn.textContent = t === 'all' ? 'All' : t.charAt(0).toUpperCase() + t.slice(1);
+    btn.dataset.type = t;
+    btn.addEventListener('click', () => {
+      currentFilter = t;
+      pf.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.type === t));
+      renderPubs();
+    });
+    pf.appendChild(btn);
+  });
+
+  function renderPubs() {
+    const pl = $('pub-list');
+    pl.innerHTML = '';
+    const filtered = currentFilter === 'all'
+      ? D.publications
+      : D.publications.filter(p => p.type === currentFilter);
+
+    filtered.sort((a, b) => b.year - a.year);
+
+    filtered.forEach(p => {
+      const card = document.createElement('div');
+      card.className = `pub-card${p.highlight ? ' highlight' : ''}`;
+
+      const authorHtml = p.authors.replace(
+        name,
+        `<span class="me">${name}</span>`
+      );
+
+      const linkBtns = Object.entries(p.links)
+        .filter(([, v]) => v)
+        .map(([k, v]) => `<a href="${v}" target="_blank" class="pub-link ${k === 'pdf' ? 'pdf-link' : ''}">${ICONS[k] || ''} ${k.toUpperCase()}</a>`)
+        .join('');
+
+      const tagHtml = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+      card.innerHTML = `
+        <span class="pub-badge badge-${p.type}">${p.type}</span>
+        <div class="pub-title">${p.title}</div>
+        <div class="pub-authors">${authorHtml}</div>
+        <div class="pub-venue">${p.venue}<span class="year">${p.year}</span></div>
+        <div class="pub-abstract" id="abs-${p.id}">${p.abstract}</div>
+        <div class="pub-footer">
+          ${linkBtns}
+          <button class="abstract-toggle" onclick="toggleAbs('${p.id}', this)">+ Abstract</button>
+          <div class="pub-tags">${tagHtml}</div>
+        </div>
+      `;
+      pl.appendChild(card);
+    });
+  }
+
+  window.toggleAbs = function(id, btn) {
+    const el = document.getElementById('abs-' + id);
+    const visible = el.classList.toggle('visible');
+    btn.textContent = visible ? '− Abstract' : '+ Abstract';
+  };
+
+  renderPubs();
+
+  /* ── projects ────────────────────────── */
+  const pg = $('project-grid');
+  D.projects.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'project-card';
+
+    const statusClass = p.status.toLowerCase();
+    const projectLinks = Object.entries(p.links)
+      .filter(([, v]) => v)
+      .map(([k, v]) => `<a href="${v}" target="_blank" class="pub-link">${ICONS[k] || ICONS.ext} ${k.charAt(0).toUpperCase() + k.slice(1)}</a>`)
+      .join('');
+
+    const tagHtml = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
+
+    card.innerHTML = `
+      <span class="project-status ${statusClass}">${p.status}</span>
+      <div class="project-title">${p.title}</div>
+      <div class="project-subtitle">${p.subtitle}</div>
+      <p class="project-desc">${p.description}</p>
+      <div class="project-footer">${projectLinks}</div>
+      <div class="tag-list" style="margin-top:10px;gap:5px;">${tagHtml}</div>
+    `;
+    pg.appendChild(card);
+  });
+
+  /* ── teaching ────────────────────────── */
+  const tl = $('teaching-list');
+  D.teaching.forEach(t => {
+    const div = document.createElement('div');
+    div.className = 'teaching-item';
+    div.innerHTML = `
+      <div>
+        <div class="teaching-course">${t.course}</div>
+        <div class="teaching-meta">${t.institution} · ${t.year}</div>
+        <div class="teaching-role">${t.role}</div>
+      </div>
+      <div class="teaching-hours">${t.hours}</div>
+    `;
+    tl.appendChild(div);
+  });
+
+  /* ── contact ─────────────────────────── */
+  const ci = $('contact-info');
+  const emailA = document.createElement('a');
+  emailA.href = `mailto:${D.email}`;
+  emailA.innerHTML = `${ICONS.email} ${D.email}`;
+  ci.appendChild(emailA);
+
+  if (D.links.scholar) {
+    const a = document.createElement('a');
+    a.href = D.links.scholar; a.target = '_blank';
+    a.innerHTML = `${ICONS.scholar} Google Scholar`;
+    ci.appendChild(a);
+  }
+  if (D.links.github) {
+    const a = document.createElement('a');
+    a.href = D.links.github; a.target = '_blank';
+    a.innerHTML = `${ICONS.github} GitHub`;
+    ci.appendChild(a);
+  }
+  if (D.links.linkedin) {
+    const a = document.createElement('a');
+    a.href = D.links.linkedin; a.target = '_blank';
+    a.innerHTML = `${ICONS.linkedin} LinkedIn`;
+    ci.appendChild(a);
+  }
+
+  /* ── active nav highlight ─────────────── */
+  const sections = document.querySelectorAll('section[id], .hero');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.nav-link[data-section="${e.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+
+  /* ── mobile menu ─────────────────────── */
+  const hamburger = $('hamburger');
+  const sidebar = $('sidebar');
+  const overlay = $('overlay');
+
+  hamburger.addEventListener('click', () => {
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('open');
+  });
+
+  overlay.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('open');
+  });
+
+  document.querySelectorAll('.sidebar-nav a').forEach(a => {
+    a.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    });
+  });
+
+})();
+</script>
 
 </body>
 </html>
