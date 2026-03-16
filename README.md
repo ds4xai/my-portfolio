@@ -9,7 +9,7 @@
 
 ## Overview
 
-A personal academic portfolio built entirely from scratch — no templates, no CSS frameworks — as a deliberate exercise in front-end fundamentals. The goal was to produce a clean, research-oriented personal page that reflects the same standards of clarity and rigour applied in scientific work.
+A personal academic portfolio built entirely from scratch, no templates, no CSS frameworks as a deliberate exercise in front-end fundamentals. The goal was to produce a clean, research-oriented personal page that reflects the same standards of clarity and rigour applied in scientific work.
 
 The site presents research activities, publications, projects, and teaching, with a design that prioritizes readability and accessibility across devices.
 
